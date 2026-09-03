@@ -35,11 +35,11 @@ def cabecera(actual, titulo, descripcion):
 <meta property="og:description" content="{descripcion}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/img/escudo.png">
-<meta name="theme-color" content="#0C100D">
+<meta name="theme-color" content="#10201A">
 <link rel="icon" href="assets/img/escudo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -50,7 +50,7 @@ def cabecera(actual, titulo, descripcion):
     <a class="marca" href="index.html">
       <img src="assets/img/escudo.png" alt="">
       <span class="marca-texto">Rubio Ñu
-        <small>ASUNCIÓN · DESDE 1913</small>
+        <small>ASUNCIÓN 1913</small>
       </span>
     </a>
     <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal">Menú</button>
@@ -59,7 +59,7 @@ def cabecera(actual, titulo, descripcion):
     </nav>
   </div>
 </header>
-<div class="filete bastones-fino"></div>
+<div class="filete bastones"></div>
 
 <main id="contenido">
 """
@@ -164,8 +164,8 @@ INICIO = """
     <img class="portada-escudo" src="assets/img/escudo.png" alt="Escudo del Club Rubio Ñu">
     <div>
       <h1>Rubio Ñu</h1>
-      <p class="portada-bajada">Ciento trece años de barrio, de cantera y de camiseta verde.
-      El club de Santísima Trinidad juega otra vez en la División de Honor del fútbol paraguayo.</p>
+      <p class="portada-bajada">Blanco por la pureza, verde por la esperanza. El albiverde de
+      Santísima Trinidad juega otra vez en la División de Honor del fútbol paraguayo.</p>
     </div>
   </div>
   <div class="marco portada-datos">
@@ -196,27 +196,33 @@ INICIO = """
   </div>
 </section>
 
-<section class="seccion seccion-oscura">
+<section class="seccion seccion-tinta textura-diagonal">
   <div class="marco">
-    <h2 class="titulo-seccion">De Trinidad al fútbol grande</h2>
-    <p class="entrada">Rubio Ñu nació en 1913 en el barrio Santísima Trinidad de Asunción y desde
-    entonces no se movió de ahí. En 2025 salió campeón de la División Intermedia y volvió a la
-    máxima categoría del fútbol paraguayo.</p>
+    <h2 class="titulo-seccion">El club siempre vuelve</h2>
+    <p class="entrada">Rubio Ñu nació en 1913 en Santísima Trinidad y nunca se movió del barrio.
+    La resiliencia es lo que define su historia.</p>
     <div class="hitos">
       <article class="hito">
         <div class="hito-anio">1913</div>
         <div>
           <h3>La fundación</h3>
-          <p>Un grupo de vecinos de Santísima Trinidad funda el club el 24 de agosto. La sede y la
-          cancha nunca salieron del barrio.</p>
+          <p>Un grupo de amigos funda el club el 24 de agosto y elige el blanco y el verde:
+          blanco por la pureza, verde por la esperanza. De ahí viene el apodo albiverde.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1936</div>
+        <div>
+          <h3>La refundación</h3>
+          <p>Tras veintitrés años de historia, Itá Ybaté y Flor de Mayo, dos clubes del mismo
+          barrio, se fusionan con Rubio Ñu para mantenerlo con vida.</p>
         </div>
       </article>
       <article class="hito">
         <div class="hito-anio">2025</div>
         <div>
           <h3>Campeón de la Intermedia</h3>
-          <p>El equipo gana la segunda categoría y sella el ascenso a la División de Honor después
-          de años de espera.</p>
+          <p>El equipo gana la segunda categoría y sella el ascenso a la División de Honor.</p>
         </div>
       </article>
       <article class="hito">
@@ -283,8 +289,44 @@ CLUB = """
     <img class="portada-escudo" src="assets/img/escudo.png" alt="">
     <div>
       <h1>El club</h1>
-      <p class="portada-bajada">Historia, escudo, estadio y estructura institucional de Rubio Ñu.</p>
+      <p class="portada-bajada">Un club de barrio con más de un siglo de historia.</p>
     </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco dos-columnas">
+    <div>
+      <h2 class="titulo-seccion">Un club de barrio con más de un siglo de historia</h2>
+      <p>Rubio Ñu nació el 24 de agosto de 1913 en el barrio de Santísima Trinidad, Asunción, de la
+      mano de un grupo de amigos que eligió el blanco y el verde como colores del club: blanco por
+      la pureza, verde por la esperanza. Esa combinación le dio al club su apodo, albiverde.</p>
+      <p>En 1936, tras veintitrés años de historia, dos clubes del mismo barrio, Itá Ybaté y Flor de
+      Mayo, se fusionaron con Rubio Ñu para mantenerlo con vida. Esa refundación marcó al club:
+      volver siempre, incluso después de las bajas.</p>
+      <p>El club juega sus partidos como local en el Estadio La Arboleda, y sostiene su rivalidad
+      histórica con Sportivo Trinidense en el Clásico de Trinidad. A sus jugadores e hinchas se los
+      conoce como ñuenses.</p>
+    </div>
+    <div>
+      <h3 style="font-size:1.1rem;color:var(--verde-hondo);margin-bottom:1rem">Valores</h3>
+      <ul class="lista-marca">
+        <li>Resiliencia: el club siempre vuelve.</li>
+        <li>Identidad de barrio, en Santísima Trinidad.</li>
+        <li>Formación de talento joven.</li>
+        <li>Proyección sudamericana.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-verde">
+  <div class="marco dos-columnas">
+    <p class="cita-mision">Un club histórico de barrio que honra su resiliencia de más de cien
+    años y que busca consolidarse como miembro permanente de la Primera División.</p>
+    <p class="entrada" style="margin:0">La misión del club es formar y exportar talento paraguayo y
+    sudamericano, sosteniendo el crecimiento deportivo e institucional sin perder la identidad de
+    Santísima Trinidad.</p>
   </div>
 </section>
 
@@ -292,27 +334,36 @@ CLUB = """
   <div class="marco">
     <h2 class="titulo-seccion">Datos institucionales</h2>
     <dl class="datos-grilla">
-      <div class="dato"><dt>FUNDACIÓN</dt><dd>24 de agosto de 1913</dd></div>
-      <div class="dato"><dt>BARRIO</dt><dd>Santísima Trinidad</dd></div>
-      <div class="dato"><dt>CIUDAD</dt><dd>Asunción, Paraguay</dd></div>
-      <div class="dato"><dt>ESTADIO</dt><dd>La Arboleda</dd></div>
-      <div class="dato"><dt>CATEGORÍA 2026</dt><dd>División de Honor</dd></div>
-      <div class="dato"><dt>ASOCIACIÓN</dt><dd>APF</dd></div>
+      <div class="dato"><dt>Fundación</dt><dd>24 de agosto de 1913</dd></div>
+      <div class="dato"><dt>Barrio</dt><dd>Santísima Trinidad</dd></div>
+      <div class="dato"><dt>Ciudad</dt><dd>Asunción, Paraguay</dd></div>
+      <div class="dato"><dt>Estadio</dt><dd>La Arboleda</dd></div>
+      <div class="dato"><dt>Apodos</dt><dd>Albiverde, Ñuenses, Laureado</dd></div>
+      <div class="dato"><dt>Clásico</dt><dd>Sportivo Trinidense</dd></div>
+      <div class="dato"><dt>Categoría 2026</dt><dd>División de Honor</dd></div>
+      <div class="dato"><dt>Asociación</dt><dd>APF</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="seccion seccion-oscura">
+<section class="seccion seccion-tinta textura-diagonal">
   <div class="marco">
-    <h2 class="titulo-seccion">Historia</h2>
-    <p class="entrada">Esta sección espera el material institucional verificado del club:
-    fundadores, campeonatos, ídolos y los momentos que hicieron a Rubio Ñu lo que es.</p>
+    <h2 class="titulo-seccion">Línea de tiempo</h2>
     <div class="hitos">
       <article class="hito">
         <div class="hito-anio">1913</div>
         <div>
           <h3>La fundación</h3>
-          <p>Rubio Ñu se funda el 24 de agosto en el barrio Santísima Trinidad de Asunción.</p>
+          <p>Un grupo de amigos funda el club el 24 de agosto en Santísima Trinidad y elige el
+          blanco y el verde como colores.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1936</div>
+        <div>
+          <h3>La refundación</h3>
+          <p>Itá Ybaté y Flor de Mayo, dos clubes del mismo barrio, se fusionan con Rubio Ñu para
+          mantenerlo con vida.</p>
         </div>
       </article>
       <article class="hito">
@@ -339,15 +390,15 @@ CLUB = """
     <p class="entrada">La cancha del club, en el mismo barrio donde se fundó. Acá juega Rubio Ñu
     de local todas las fechas del torneo.</p>
     <dl class="datos-grilla">
-      <div class="dato"><dt>UBICACIÓN</dt><dd>Santísima Trinidad</dd></div>
-      <div class="dato"><dt>CAPACIDAD</dt><dd>Por confirmar</dd></div>
-      <div class="dato"><dt>SUPERFICIE</dt><dd>Césped natural</dd></div>
-      <div class="dato"><dt>INAUGURACIÓN</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>Ubicación</dt><dd>Santísima Trinidad</dd></div>
+      <div class="dato"><dt>Capacidad</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>Superficie</dt><dd>Césped natural</dd></div>
+      <div class="dato"><dt>Inauguración</dt><dd>Por confirmar</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="seccion seccion-hueso" id="comision">
+<section class="seccion seccion-gris" id="comision">
   <div class="marco">
     <h2 class="titulo-seccion">Comisión directiva</h2>
     <p class="entrada">La nómina completa de la comisión directiva se publica en esta página.</p>
@@ -374,7 +425,7 @@ PLANTEL = """
   </div>
 </section>
 
-<section class="seccion seccion-hueso">
+<section class="seccion seccion-gris">
   <div class="marco">
     <h2 class="titulo-seccion">Cuerpo técnico</h2>
     <div class="vacio">Pendiente de carga.</div>
@@ -410,7 +461,7 @@ FIXTURE = """
   </div>
 </section>
 
-<section class="seccion seccion-hueso">
+<section class="seccion seccion-gris">
   <div class="marco">
     <h2 class="titulo-seccion">Calendario completo</h2>
     <p class="entrada">Las 22 fechas del torneo, con horarios y sedes.</p>
@@ -487,15 +538,15 @@ SOCIOS = """
     <p class="entrada">Las cuotas, los beneficios y la forma de pago se confirman con la
     administración del club antes de publicar esta página.</p>
     <dl class="datos-grilla">
-      <div class="dato"><dt>SOCIO ACTIVO</dt><dd>Cuota a confirmar</dd></div>
-      <div class="dato"><dt>SOCIO MENOR</dt><dd>Cuota a confirmar</dd></div>
-      <div class="dato"><dt>SOCIO ADHERENTE</dt><dd>Cuota a confirmar</dd></div>
-      <div class="dato"><dt>SOCIO VITALICIO</dt><dd>Cuota a confirmar</dd></div>
+      <div class="dato"><dt>Socio activo</dt><dd>Cuota a confirmar</dd></div>
+      <div class="dato"><dt>Socio menor</dt><dd>Cuota a confirmar</dd></div>
+      <div class="dato"><dt>Socio adherente</dt><dd>Cuota a confirmar</dd></div>
+      <div class="dato"><dt>Socio vitalicio</dt><dd>Cuota a confirmar</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="seccion seccion-hueso">
+<section class="seccion seccion-gris">
   <div class="marco">
     <h2 class="titulo-seccion">Asociate</h2>
     <p class="entrada">Dejá tus datos y la administración se comunica para completar el alta.</p>
@@ -547,15 +598,15 @@ CONTACTO = """
   <div class="marco">
     <h2 class="titulo-seccion">Dónde encontrarnos</h2>
     <dl class="datos-grilla">
-      <div class="dato"><dt>SEDE</dt><dd>Santísima Trinidad, Asunción</dd></div>
-      <div class="dato"><dt>TELÉFONO</dt><dd>Por confirmar</dd></div>
-      <div class="dato"><dt>CORREO</dt><dd>Por confirmar</dd></div>
-      <div class="dato"><dt>HORARIOS</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>Sede</dt><dd>Santísima Trinidad, Asunción</dd></div>
+      <div class="dato"><dt>Teléfono</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>Correo</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>Horarios</dt><dd>Por confirmar</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="seccion seccion-hueso" id="prensa">
+<section class="seccion seccion-gris" id="prensa">
   <div class="marco">
     <h2 class="titulo-seccion">Escribinos</h2>
     <form class="formulario" method="post" action="#">
