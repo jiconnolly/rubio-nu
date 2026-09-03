@@ -1,0 +1,16 @@
+{
+  "temporada": "2026",
+  "actualizado": "2026-09-03",
+  "cuerpoTecnico": [
+    { "rol": "Director técnico", "nombre": "" },
+    { "rol": "Ayudante de campo", "nombre": "" },
+    { "rol": "Preparador físico", "nombre": "" },
+    { "rol": "Entrenador de arqueros", "nombre": "" }
+  ],
+  "jugadores": [
+    { "numero": null, "nombre": "", "puesto": "Arqueros", "nacimiento": "", "nacionalidad": "PY", "foto": "" },
+    { "numero": null, "nombre": "", "puesto": "Defensores", "nacimiento": "", "nacionalidad": "PY", "foto": "" },
+    { "numero": null, "nombre": "", "puesto": "Mediocampistas", "nacimiento": "", "nacionalidad": "PY", "foto": "" },
+    { "numero": null, "nombre": "", "puesto": "Delanteros", "nacimiento": "", "nacionalidad": "PY", "foto": "" }
+  ]
+}

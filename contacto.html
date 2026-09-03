@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · Club Rubio Ñu</title>
+<meta name="description" content="Datos de contacto del Club Rubio Ñu.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Contacto · Club Rubio Ñu">
+<meta property="og:description" content="Datos de contacto del Club Rubio Ñu.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/escudo.png">
+<meta name="theme-color" content="#0C100D">
+<link rel="icon" href="assets/img/escudo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Ir al contenido</a>
+
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="index.html">
+      <img src="assets/img/escudo.png" alt="">
+      <span class="marca-texto">Rubio Ñu
+        <small>ASUNCIÓN · DESDE 1913</small>
+      </span>
+    </a>
+    <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+    <nav class="menu" id="menu-principal" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="club.html">El club</a>
+        <a href="plantel.html">Plantel</a>
+        <a href="fixture.html">Fixture y tabla</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="socios.html">Hacete socio</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+  </div>
+</header>
+<div class="filete bastones-fino"></div>
+
+<main id="contenido">
+
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="assets/img/escudo.png" alt="">
+    <div>
+      <h1>Contacto</h1>
+      <p class="portada-bajada">Sede, prensa, sponsors y administración.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <h2 class="titulo-seccion">Dónde encontrarnos</h2>
+    <dl class="datos-grilla">
+      <div class="dato"><dt>SEDE</dt><dd>Santísima Trinidad, Asunción</dd></div>
+      <div class="dato"><dt>TELÉFONO</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>CORREO</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>HORARIOS</dt><dd>Por confirmar</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="seccion seccion-hueso" id="prensa">
+  <div class="marco">
+    <h2 class="titulo-seccion">Escribinos</h2>
+    <form class="formulario" method="post" action="#">
+      <div class="campo">
+        <label for="c-nombre">Nombre</label>
+        <input id="c-nombre" name="nombre" type="text" required>
+      </div>
+      <div class="campo">
+        <label for="c-mail">Correo electrónico</label>
+        <input id="c-mail" name="email" type="email" required>
+      </div>
+      <div class="campo">
+        <label for="c-motivo">Motivo</label>
+        <select id="c-motivo" name="motivo">
+          <option>Consulta general</option>
+          <option>Prensa</option>
+          <option>Sponsors y comercial</option>
+          <option>Inferiores y captación</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="c-mensaje">Mensaje</label>
+        <textarea id="c-mensaje" name="mensaje" required></textarea>
+      </div>
+      <div><button class="boton" type="submit">Enviar mensaje</button></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="marco">
+    <div class="pie-grilla">
+      <div class="pie-escudo">
+        <img src="assets/img/escudo.png" alt="">
+        <div>
+          <strong style="color:var(--hueso)">Club Rubio Ñu</strong><br>
+          Barrio Santísima Trinidad, Asunción, Paraguay.<br>
+          Fundado el 24 de agosto de 1913.
+        </div>
+      </div>
+      <div>
+        <h4>EL CLUB</h4>
+        <ul>
+          <li><a href="club.html">Historia</a></li>
+          <li><a href="club.html#estadio">La Arboleda</a></li>
+          <li><a href="plantel.html">Plantel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>COMPETENCIA</h4>
+        <ul>
+          <li><a href="fixture.html">Fixture</a></li>
+          <li><a href="fixture.html#tabla">Tabla de posiciones</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>PARTICIPAR</h4>
+        <ul>
+          <li><a href="socios.html">Hacete socio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contacto.html#prensa">Prensa</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pie-legal">
+      <span>© 2026 Club Rubio Ñu. Todos los derechos reservados.</span>
+      <span>Asociación Paraguaya de Fútbol · División de Honor</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
