@@ -577,6 +577,64 @@ table.posiciones td.pts { font-weight: 700; }
 .campo input:focus, .campo textarea:focus { border-color: var(--verde); }
 .campo textarea { min-height: 130px; resize: vertical; }
 
+/* ===== Sponsors ===== */
+.banda-sponsors {
+  background: #FFFFFF;
+  border-top: 3px solid var(--verde);
+  padding: clamp(2rem, 4vw, 2.75rem) 0;
+}
+.rotulo-sponsors {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--tinta-suave);
+  text-align: center;
+  margin: 0 0 1.6rem;
+}
+.grilla-sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.75rem, 5vw, 3.5rem);
+}
+.grilla-sponsors img {
+  height: 38px;
+  width: auto;
+  filter: saturate(0.95);
+}
+.grilla-sponsors img.alto { height: 56px; }
+@media (max-width: 560px) {
+  .grilla-sponsors { gap: 1.5rem 2rem; }
+  .grilla-sponsors img { height: 30px; }
+  .grilla-sponsors img.alto { height: 44px; }
+}
+
+/* ===== Instituciones ===== */
+.instituciones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(243, 241, 233, 0.12);
+}
+.instituciones-escudos { display: flex; gap: 0.6rem; }
+.instituciones-escudos span {
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 7px 9px;
+  display: grid;
+  place-items: center;
+}
+.instituciones-escudos img { height: 34px; width: auto; }
+.instituciones p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgba(243, 241, 233, 0.55);
+  max-width: 42ch;
+}
+
 /* ===== Pie ===== */
 .pie {
   background: var(--carbon);
@@ -586,10 +644,17 @@ table.posiciones td.pts { font-weight: 700; }
 }
 .pie-grilla {
   display: grid;
-  grid-template-columns: 1.4fr repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: 1.7fr 1fr 1fr 1fr;
   gap: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(243, 241, 233, 0.12);
+}
+@media (max-width: 880px) {
+  .pie-grilla { grid-template-columns: 1fr 1fr; }
+  .pie-escudo { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .pie-grilla { grid-template-columns: 1fr; }
 }
 .pie h4 {
   font-family: 'Archivo', sans-serif;

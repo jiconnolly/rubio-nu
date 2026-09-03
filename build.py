@@ -65,11 +65,46 @@ def cabecera(actual, titulo, descripcion):
 """
 
 
+SPONSORS = [
+    ("kia.png", "Kia", ""),
+    ("ueno-bank.png", "ueno bank", ""),
+    ("garcis.png", "Garcis", "alto"),
+    ("bambi.png", "Bambi", "alto"),
+    ("lacteos-trebol.png", "Lácteos Trébol", "alto"),
+]
+
+
+def banda_sponsors():
+    logos = "\n".join(
+        '        <img src="assets/img/sponsors/{a}" alt="{n}" class="{c}" loading="lazy">'.format(
+            a=a, n=n, c=c
+        )
+        for a, n, c in SPONSORS
+    )
+    return f"""<section class="banda-sponsors">
+  <div class="marco">
+    <p class="rotulo-sponsors">SPONSORS</p>
+    <div class="grilla-sponsors">
+{logos}
+    </div>
+  </div>
+</section>
+
+"""
+
+
 def pie():
-    return f"""</main>
+    return banda_sponsors() + f"""</main>
 
 <footer class="pie">
   <div class="marco">
+    <div class="instituciones">
+      <div class="instituciones-escudos">
+        <span><img src="assets/img/instituciones/apf.png" alt="Asociación Paraguaya de Fútbol"></span>
+        <span><img src="assets/img/instituciones/conmebol.png" alt="CONMEBOL"></span>
+      </div>
+      <p>Rubio Ñu está afiliado a la Asociación Paraguaya de Fútbol, miembro de la CONMEBOL.</p>
+    </div>
     <div class="pie-grilla">
       <div class="pie-escudo">
         <img src="assets/img/escudo.png" alt="">
