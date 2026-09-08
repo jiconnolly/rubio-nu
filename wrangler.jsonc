@@ -3,6 +3,9 @@
   // El sitio es estático: no hay build, se sirven los archivos tal cual.
   "name": "rubio-nu",
   "compatibility_date": "2026-09-08",
+  // Sin URLs de vista previa: cada despliegue generaría una dirección
+  // pública extra del sitio, y alcanza con el dominio del club.
+  "preview_urls": false,
   "assets": {
     "directory": "./",
     "not_found_handling": "404-page"
