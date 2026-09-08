@@ -245,21 +245,26 @@ def pie(idioma):
 ES = {}
 
 ES["index"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="Escudo del Club Rubio Ñu">
-    <div>
-      <h1>Rubio Ñu</h1>
-      <p class="portada-bajada">Blanco por la pureza, verde por la esperanza. El albiverde de
-      Santísima Trinidad juega otra vez en la División de Honor del fútbol paraguayo.</p>
+<section class="portada-foto">
+  <div class="fondo" style="background-image:url('{base}assets/img/portada-arboleda.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="Escudo del Club Rubio Ñu">
+      <div>
+        <p class="placa-kicker">Santísima Trinidad · Asunción</p>
+        <h1>Rubio Ñu</h1>
+        <p class="lema">Ciento trece años en la misma manzana. Blanco por la pureza, verde por la
+        esperanza: el albiverde volvió a la División de Honor.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>Estadio <b>La Arboleda</b>, el barrio donde el club se fundó en <b>1913</b></span>
+      <span class="sello">Albiverde · Ñuenses · Laureado</span>
     </div>
   </div>
-  <div class="marco portada-datos">
-    <span>Fundado el <b>24 de agosto de 1913</b></span>
-    <span>Estadio <b>La Arboleda</b></span>
-    <span>Asunción, <b>Paraguay</b></span>
-  </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="franja-partido">
   <div class="marco partido-grilla">
@@ -279,6 +284,16 @@ ES["index"] = """
       <a class="enlace-mas" href="fixture.html#tabla">Tabla completa y fixture</a>
     </div>
     <div data-tabla="resumida"><p class="cargando">Cargando tabla…</p></div>
+  </div>
+</section>
+
+<section class="banda-foto">
+  <div class="fondo" style="background-image:url('{base}assets/img/barrio-trinidad.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <p class="banda-cita">El club nunca se mudó del barrio
+      <span>Santísima Trinidad, Asunción, desde 1913.</span>
+    </p>
   </div>
 </section>
 
@@ -673,21 +688,26 @@ ES["contacto"] = """
 EN = {}
 
 EN["index"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="Club Rubio Ñu crest">
-    <div>
-      <h1>Rubio Ñu</h1>
-      <p class="portada-bajada">White for purity, green for hope. The albiverde of Santísima
-      Trinidad is back in the top flight of Paraguayan football.</p>
+<section class="portada-foto">
+  <div class="fondo" style="background-image:url('{base}assets/img/portada-arboleda.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="Club Rubio Ñu crest">
+      <div>
+        <p class="placa-kicker">Santísima Trinidad · Asunción</p>
+        <h1>Rubio Ñu</h1>
+        <p class="lema">A hundred and thirteen years on the same block. White for purity, green for
+        hope: the albiverde is back in the top flight.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>Estadio <b>La Arboleda</b>, in the barrio where the club was founded in <b>1913</b></span>
+      <span class="sello">Albiverde · Ñuenses · Laureado</span>
     </div>
   </div>
-  <div class="marco portada-datos">
-    <span>Founded on <b>24 August 1913</b></span>
-    <span>Stadium <b>La Arboleda</b></span>
-    <span>Asunción, <b>Paraguay</b></span>
-  </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="franja-partido">
   <div class="marco partido-grilla">
@@ -707,6 +727,16 @@ EN["index"] = """
       <a class="enlace-mas" href="fixture.html#tabla">Full table and fixtures</a>
     </div>
     <div data-tabla="resumida"><p class="cargando">Loading table…</p></div>
+  </div>
+</section>
+
+<section class="banda-foto">
+  <div class="fondo" style="background-image:url('{base}assets/img/barrio-trinidad.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <p class="banda-cita">The club never left the neighbourhood
+      <span>Santísima Trinidad, Asunción, since 1913.</span>
+    </p>
   </div>
 </section>
 

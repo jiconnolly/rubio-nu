@@ -445,6 +445,104 @@ table.posiciones td.pts { font-weight: 700; }
 .instituciones-escudos img { height: 34px; width: auto; }
 .instituciones p { margin: 0; font-size: 0.82rem; color: rgba(255, 255, 255, 0.55); max-width: 42ch; }
 
+/* ===== Portada con fotografía =====
+   La foto da contexto; el escudo nunca se apoya sobre ella, va en una
+   placa sólida de alto contraste como pide el manual. */
+.portada-foto {
+  position: relative;
+  background: var(--tinta);
+  min-height: min(86vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.portada-foto .fondo {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center 62%;
+}
+.portada-foto .velo {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(100deg, rgba(16,32,26,0.94) 0%, rgba(16,32,26,0.78) 34%, rgba(16,32,26,0.18) 74%),
+    linear-gradient(to top, rgba(16,32,26,0.88) 0%, rgba(16,32,26,0) 48%),
+    linear-gradient(rgba(16,32,26,0.18), rgba(16,32,26,0.18));
+}
+.portada-foto .marco { position: relative; z-index: 2; width: min(100% - 2.5rem, var(--marco)); }
+
+.placa {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: center;
+  max-width: 760px;
+  margin: clamp(3rem, 9vw, 6rem) 0 clamp(1.25rem, 3vw, 2rem);
+}
+.placa img {
+  width: clamp(96px, 14vw, 168px);
+  border-radius: 50%;
+  background: var(--tinta);
+  box-shadow: 0 0 0 12px var(--tinta);
+}
+.placa-kicker {
+  font-family: 'Oswald', sans-serif; text-transform: uppercase;
+  font-size: clamp(0.72rem, 1.5vw, 0.85rem); letter-spacing: 0.22em;
+  color: var(--verde); margin: 0 0 0.6rem; font-weight: 500;
+}
+.placa h1 {
+  font-size: clamp(3rem, 10vw, 6.8rem);
+  color: var(--blanco);
+  line-height: 0.9;
+}
+.placa p.lema {
+  margin: 1rem 0 0; max-width: 40ch;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+}
+
+.pie-foto {
+  position: relative; z-index: 2;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  flex-wrap: wrap; gap: 0.75rem;
+  padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 0.8rem; color: rgba(255, 255, 255, 0.55);
+}
+.pie-foto b { color: rgba(255, 255, 255, 0.9); font-weight: 700; }
+.pie-foto .sello {
+  font-family: 'Oswald', sans-serif; text-transform: uppercase;
+  letter-spacing: 0.16em; font-size: 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 0.4rem 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .placa { grid-template-columns: 1fr; gap: 1rem; }
+  .portada-foto { min-height: auto; }
+}
+
+/* ===== Banda fotográfica intermedia ===== */
+.banda-foto {
+  position: relative;
+  min-height: clamp(340px, 46vw, 520px);
+  display: flex; align-items: center;
+  background: var(--tinta);
+  overflow: hidden;
+}
+.banda-foto .fondo { position: absolute; inset: 0; background-size: cover; background-position: center 60%; }
+.banda-foto .velo {
+  position: absolute; inset: 0;
+  background: linear-gradient(260deg, rgba(16,32,26,0.9) 0%, rgba(16,32,26,0.68) 42%, rgba(16,32,26,0.2) 100%);
+}
+.banda-foto .marco { position: relative; z-index: 2; }
+.banda-cita {
+  margin-left: auto; max-width: 30ch; text-align: right;
+  font-family: 'Oswald', sans-serif; font-weight: 500; text-transform: uppercase;
+  font-size: clamp(1.3rem, 3.2vw, 2.2rem); line-height: 1.25;
+  color: var(--blanco);
+}
+.banda-cita span { display: block; margin-top: 1rem; font-family: 'Karla', sans-serif;
+  text-transform: none; font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.6); }
+
 /* ===== Pie ===== */
 .pie {
   background: var(--tinta); color: rgba(255, 255, 255, 0.62);
