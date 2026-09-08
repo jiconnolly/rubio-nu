@@ -579,6 +579,10 @@ table.posiciones td.pts { font-weight: 700; }
 }
 .figura-estadio figcaption b { color: var(--tinta); font-weight: 700; }
 
+.seccion-tinta .figura-estadio figcaption { color: rgba(255, 255, 255, 0.55); }
+.seccion-tinta .figura-estadio figcaption b { color: rgba(255, 255, 255, 0.85); }
+.figura-ancha { margin-top: clamp(2rem, 5vw, 3rem); }
+
 /* ===== Redes ===== */
 .redes { display: flex; gap: 0.6rem; margin-top: 1rem; }
 .redes a {

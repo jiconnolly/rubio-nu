@@ -445,6 +445,17 @@ ES["club"] = """
       espera la validación del archivo histórico del club.</p>
     </div>
   </div>
+  <div class="marco">
+    <figure class="figura-estadio figura-ancha">
+      <img src="{base}assets/img/ninos-martires.webp"
+           alt="Monumento a los Niños Mártires de Acosta Ñu, con la bandera paraguaya recortada en chapa y las siluetas de un soldado y un niño"
+           loading="lazy" width="1600" height="1066">
+      <figcaption>
+        <span>Monumento a los Niños Mártires, en Eusebio Ayala, donde ocurrió la batalla.</span>
+        <span><b>16 de agosto</b>, Día del Niño en Paraguay</span>
+      </figcaption>
+    </figure>
+  </div>
 </section>
 
 <section class="seccion seccion-verde">
@@ -992,6 +1003,17 @@ EN["club"] = """
       <p style="color:rgba(255,255,255,0.6);font-size:0.88rem;margin-top:1.25rem">This section is
       pending validation by the club's historical archive.</p>
     </div>
+  </div>
+  <div class="marco">
+    <figure class="figura-estadio figura-ancha">
+      <img src="{base}assets/img/ninos-martires.webp"
+           alt="Monument to the Child Martyrs of Acosta Ñu, with the Paraguayan flag cut in sheet metal and the silhouettes of a soldier and a child"
+           loading="lazy" width="1600" height="1066">
+      <figcaption>
+        <span>Monument to the Child Martyrs, in Eusebio Ayala, where the battle took place.</span>
+        <span><b>16 August</b>, Children's Day in Paraguay</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
