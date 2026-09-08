@@ -545,6 +545,18 @@ table.posiciones td.pts { font-weight: 700; }
 .banda-cita span { display: block; margin-top: 1rem; font-family: 'Karla', sans-serif;
   text-transform: none; font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.6); }
 
+/* ===== Figura del estadio ===== */
+.figura-estadio { margin: 0 0 clamp(1.75rem, 4vw, 2.5rem); }
+.figura-estadio img {
+  width: 100%; height: auto; display: block;
+  border-top: 4px solid var(--verde);
+}
+.figura-estadio figcaption {
+  margin-top: 0.7rem; font-size: 0.82rem; color: var(--tinta-suave);
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.figura-estadio figcaption b { color: var(--tinta); font-weight: 700; }
+
 /* ===== Pie ===== */
 .pie {
   background: var(--tinta); color: rgba(255, 255, 255, 0.62);

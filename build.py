@@ -472,6 +472,15 @@ ES["club"] = """
     <h2 class="titulo-seccion">La Arboleda</h2>
     <p class="entrada">La cancha del club, en el mismo barrio donde se fundó. Acá juega Rubio Ñu
     de local todas las fechas del torneo.</p>
+    <figure class="figura-estadio">
+      <img src="{base}assets/img/la-arboleda.webp"
+           alt="Vista aérea del Estadio La Arboleda rodeado por las casas de Santísima Trinidad"
+           loading="lazy" width="1500" height="843">
+      <figcaption>
+        <span>El estadio, encajado entre las calles del barrio.</span>
+        <span><b>Santísima Trinidad</b>, Asunción</span>
+      </figcaption>
+    </figure>
     <dl class="datos-grilla">
       <div class="dato"><dt>Ubicación</dt><dd>Santísima Trinidad</dd></div>
       <div class="dato"><dt>Capacidad</dt><dd>Por confirmar</dd></div>
@@ -915,6 +924,15 @@ EN["club"] = """
     <h2 class="titulo-seccion">La Arboleda</h2>
     <p class="entrada">The club's ground, in the same neighbourhood where it was founded. Rubio Ñu
     plays every home match here.</p>
+    <figure class="figura-estadio">
+      <img src="{base}assets/img/la-arboleda.webp"
+           alt="Aerial view of Estadio La Arboleda surrounded by the houses of Santísima Trinidad"
+           loading="lazy" width="1500" height="843">
+      <figcaption>
+        <span>The ground, wedged between the streets of the barrio.</span>
+        <span><b>Santísima Trinidad</b>, Asunción</span>
+      </figcaption>
+    </figure>
     <dl class="datos-grilla">
       <div class="dato"><dt>Location</dt><dd>Santísima Trinidad</dd></div>
       <div class="dato"><dt>Capacity</dt><dd>To be confirmed</dd></div>
