@@ -462,22 +462,22 @@ table.posiciones td.pts { font-weight: 700; }
   background-position: center 30%;
   transform-origin: 52% 46%;
   will-change: transform;
-  animation: sobrevuelo 54s ease-in-out infinite alternate;
+  animation: sobrevuelo 30s linear infinite alternate;
 }
 
 /* Sobrevuelo: avance lento con deriva diagonal, como un drone cruzando la cancha. */
 @keyframes sobrevuelo {
-  from { transform: scale(1.04) translate3d(-1.1%, 0.7%, 0); }
-  to   { transform: scale(1.15) translate3d(1.1%, -0.7%, 0); }
+  from { transform: scale(1.02) translate3d(-2.6%, 1.6%, 0); }
+  to   { transform: scale(1.24) translate3d(2.6%, -1.6%, 0); }
 }
 
 .banda-foto .fondo {
-  animation: sobrevuelo-corto 68s ease-in-out infinite alternate;
+  animation: sobrevuelo-corto 38s linear infinite alternate;
   will-change: transform;
 }
 @keyframes sobrevuelo-corto {
-  from { transform: scale(1.03) translate3d(0.8%, 0, 0); }
-  to   { transform: scale(1.11) translate3d(-0.8%, 0, 0); }
+  from { transform: scale(1.02) translate3d(2.2%, 0, 0); }
+  to   { transform: scale(1.16) translate3d(-2.2%, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
