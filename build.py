@@ -1,69 +1,80 @@
 # -*- coding: utf-8 -*-
-"""Genera las páginas del sitio de Club Rubio Ñu a partir de plantillas compartidas."""
-import os, textwrap
+"""Genera el sitio de Club Rubio Ñu en español (raíz) e inglés (/en/).
 
-SITIO = "Club Rubio Ñu"
-BASE = os.path.dirname(os.path.abspath(__file__))
-
-PAGINAS_MENU = [
-    ("index.html", "Inicio"),
-    ("club.html", "El club"),
-    ("plantel.html", "Plantel"),
-    ("fixture.html", "Fixture y tabla"),
-    ("noticias.html", "Noticias"),
-    ("socios.html", "Hacete socio"),
-    ("contacto.html", "Contacto"),
-]
-
-
-def cabecera(actual, titulo, descripcion):
-    enlaces = "\n".join(
-        '        <a href="{h}"{a}>{t}</a>'.format(
-            h=h, t=t, a=' aria-current="page"' if h == actual else ""
-        )
-        for h, t in PAGINAS_MENU
-    )
-    return f"""<!DOCTYPE html>
-<html lang="es-PY">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{titulo} · {SITIO}</title>
-<meta name="description" content="{descripcion}">
-<meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="{titulo} · {SITIO}">
-<meta property="og:description" content="{descripcion}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/escudo.png">
-<meta name="theme-color" content="#10201A">
-<link rel="icon" href="assets/img/escudo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-<a class="saltar" href="#contenido">Ir al contenido</a>
-
-<header class="cabecera">
-  <div class="marco cabecera-fila">
-    <a class="marca" href="index.html">
-      <img src="assets/img/escudo.png" alt="">
-      <span class="marca-texto">Rubio Ñu
-        <small>ASUNCIÓN 1913</small>
-      </span>
-    </a>
-    <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal">Menú</button>
-    <nav class="menu" id="menu-principal" aria-label="Principal">
-{enlaces}
-    </nav>
-  </div>
-</header>
-<div class="filete bastones"></div>
-
-<main id="contenido">
+Editar este archivo y correr `python3 build.py`. Nunca editar los HTML sueltos:
+el script los sobreescribe.
 """
+import os
 
+BASE = os.path.dirname(os.path.abspath(__file__))
+IDIOMAS = ("es", "en")
+
+PAGINAS = ["index", "club", "plantel", "fixture", "noticias", "socios", "contacto"]
+
+NAV = {
+    "es": [("index", "Inicio"), ("club", "El club"), ("plantel", "Plantel"),
+           ("fixture", "Fixture y tabla"), ("noticias", "Noticias"),
+           ("socios", "Hacete socio"), ("contacto", "Contacto")],
+    "en": [("index", "Home"), ("club", "The club"), ("plantel", "Squad"),
+           ("fixture", "Fixtures"), ("noticias", "News"),
+           ("socios", "Membership"), ("contacto", "Contact")],
+}
+
+META = {
+    "es": {
+        "index": ("Sitio oficial", "Sitio oficial del Club Rubio Ñu, de Santísima Trinidad, Asunción. Fundado en 1913."),
+        "club": ("El club", "Historia, estadio y datos institucionales del Club Rubio Ñu."),
+        "plantel": ("Plantel", "Plantel y cuerpo técnico del Club Rubio Ñu, temporada 2026."),
+        "fixture": ("Fixture y tabla", "Fixture, resultados y tabla de posiciones del Club Rubio Ñu."),
+        "noticias": ("Noticias", "Novedades del Club Rubio Ñu."),
+        "socios": ("Hacete socio", "Categorías de socio y alta en el Club Rubio Ñu."),
+        "contacto": ("Contacto", "Datos de contacto del Club Rubio Ñu."),
+    },
+    "en": {
+        "index": ("Official site", "Official site of Club Rubio Ñu, from Santísima Trinidad, Asunción. Founded in 1913."),
+        "club": ("The club", "History, stadium and institutional facts about Club Rubio Ñu."),
+        "plantel": ("Squad", "Club Rubio Ñu first-team squad and coaching staff, 2026 season."),
+        "fixture": ("Fixtures", "Club Rubio Ñu fixtures, results and league table."),
+        "noticias": ("News", "Latest from Club Rubio Ñu."),
+        "socios": ("Membership", "Membership categories and sign-up at Club Rubio Ñu."),
+        "contacto": ("Contact", "Contact details for Club Rubio Ñu."),
+    },
+}
+
+CHROME = {
+    "es": {
+        "saltar": "Ir al contenido",
+        "menu": "Menú",
+        "kicker": "ASUNCIÓN 1913",
+        "otro_idioma": "English",
+        "sponsors": "SPONSORS",
+        "instituciones": "Rubio Ñu está afiliado a la Asociación Paraguaya de Fútbol, miembro de la CONMEBOL.",
+        "pie_direccion": "Barrio Santísima Trinidad, Asunción, Paraguay.<br>Fundado el 24 de agosto de 1913.",
+        "pie_columnas": [
+            ("EL CLUB", [("club", "Historia"), ("club#estadio", "La Arboleda"), ("plantel", "Plantel")]),
+            ("COMPETENCIA", [("fixture", "Fixture"), ("fixture#tabla", "Tabla de posiciones"), ("noticias", "Noticias")]),
+            ("PARTICIPAR", [("socios", "Hacete socio"), ("contacto", "Contacto"), ("contacto#prensa", "Prensa")]),
+        ],
+        "pie_legal": "© 2026 Club Rubio Ñu. Todos los derechos reservados.",
+        "pie_liga": "Asociación Paraguaya de Fútbol · División de Honor",
+    },
+    "en": {
+        "saltar": "Skip to content",
+        "menu": "Menu",
+        "kicker": "ASUNCIÓN 1913",
+        "otro_idioma": "Español",
+        "sponsors": "SPONSORS",
+        "instituciones": "Rubio Ñu is affiliated to the Paraguayan Football Association, a member of CONMEBOL.",
+        "pie_direccion": "Santísima Trinidad, Asunción, Paraguay.<br>Founded on 24 August 1913.",
+        "pie_columnas": [
+            ("THE CLUB", [("club", "History"), ("club#estadio", "La Arboleda"), ("plantel", "Squad")]),
+            ("COMPETITION", [("fixture", "Fixtures"), ("fixture#tabla", "League table"), ("noticias", "News")]),
+            ("GET INVOLVED", [("socios", "Membership"), ("contacto", "Contact"), ("contacto#prensa", "Press")]),
+        ],
+        "pie_legal": "© 2026 Club Rubio Ñu. All rights reserved.",
+        "pie_liga": "Paraguayan Football Association · First Division",
+    },
+}
 
 SPONSORS = [
     ("kia.png", "Kia", ""),
@@ -74,16 +85,95 @@ SPONSORS = [
 ]
 
 
-def banda_sponsors():
+def ruta_salida(idioma, pagina):
+    if idioma == "es":
+        return os.path.join(BASE, pagina + ".html")
+    return os.path.join(BASE, "en", pagina + ".html")
+
+
+def prefijo(idioma):
+    """Prefijo relativo hacia la raíz del sitio para assets y datos."""
+    return "" if idioma == "es" else "../"
+
+
+def enlace_otro_idioma(idioma, pagina):
+    return ("en/" + pagina + ".html") if idioma == "es" else ("../" + pagina + ".html")
+
+
+def cabecera(idioma, pagina):
+    t = CHROME[idioma]
+    base = prefijo(idioma)
+    titulo, descripcion = META[idioma][pagina]
+    lang = "es-PY" if idioma == "es" else "en"
+
+    enlaces = "\n".join(
+        '        <a href="{h}.html"{a}>{t}</a>'.format(
+            h=h, t=txt, a=' aria-current="page"' if h == pagina else ""
+        )
+        for h, txt in NAV[idioma]
+    )
+
+    alterno_es = ("" if idioma == "es" else "../") + pagina + ".html"
+    alterno_en = ("en/" if idioma == "es" else "") + pagina + ".html"
+
+    return f"""<!DOCTYPE html>
+<html lang="{lang}" data-base="{base}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{titulo} · Club Rubio Ñu</title>
+<meta name="description" content="{descripcion}">
+<meta name="robots" content="noindex, nofollow">
+<link rel="alternate" hreflang="es" href="{alterno_es}">
+<link rel="alternate" hreflang="en" href="{alterno_en}">
+<meta property="og:title" content="{titulo} · Club Rubio Ñu">
+<meta property="og:description" content="{descripcion}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{base}assets/img/escudo.png">
+<meta name="theme-color" content="#10201A">
+<link rel="icon" href="{base}assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{base}assets/css/main.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">{t['saltar']}</a>
+
+<header class="cabecera">
+  <div class="marco cabecera-fila">
+    <a class="marca" href="index.html">
+      <img src="{base}assets/img/escudo.png" alt="">
+      <span class="marca-texto">Rubio Ñu
+        <small>{t['kicker']}</small>
+      </span>
+    </a>
+    <div class="cabecera-derecha">
+      <a class="idioma" href="{enlace_otro_idioma(idioma, pagina)}">{t['otro_idioma']}</a>
+      <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal">{t['menu']}</button>
+    </div>
+    <nav class="menu" id="menu-principal" aria-label="{t['menu']}">
+{enlaces}
+    </nav>
+  </div>
+</header>
+<div class="filete bastones"></div>
+
+<main id="contenido">
+"""
+
+
+def banda_sponsors(idioma):
+    base = prefijo(idioma)
     logos = "\n".join(
-        '        <img src="assets/img/sponsors/{a}" alt="{n}" class="{c}" loading="lazy">'.format(
-            a=a, n=n, c=c
+        '        <img src="{b}assets/img/sponsors/{a}" alt="{n}" class="{c}" loading="lazy">'.format(
+            b=base, a=a, n=n, c=c
         )
         for a, n, c in SPONSORS
     )
     return f"""<section class="banda-sponsors">
   <div class="marco">
-    <p class="rotulo-sponsors">SPONSORS</p>
+    <p class="rotulo-sponsors">{CHROME[idioma]['sponsors']}</p>
     <div class="grilla-sponsors">
 {logos}
     </div>
@@ -93,75 +183,71 @@ def banda_sponsors():
 """
 
 
-def pie():
-    return banda_sponsors() + f"""</main>
+def pie(idioma):
+    t = CHROME[idioma]
+    base = prefijo(idioma)
+    def href(destino):
+        if "#" in destino:
+            pagina, ancla = destino.split("#", 1)
+            return f"{pagina}.html#{ancla}"
+        return f"{destino}.html"
+
+    columnas = "\n".join(
+        """      <div>
+        <h4>{titulo}</h4>
+        <ul>
+{items}
+        </ul>
+      </div>""".format(
+            titulo=titulo,
+            items="\n".join(
+                f'          <li><a href="{href(h)}">{txt}</a></li>' for h, txt in items
+            ),
+        )
+        for titulo, items in t["pie_columnas"]
+    )
+
+    return banda_sponsors(idioma) + f"""</main>
 
 <footer class="pie">
   <div class="marco">
     <div class="instituciones">
       <div class="instituciones-escudos">
-        <span><img src="assets/img/instituciones/apf.png" alt="Asociación Paraguaya de Fútbol"></span>
-        <span><img src="assets/img/instituciones/conmebol.png" alt="CONMEBOL"></span>
+        <span><img src="{base}assets/img/instituciones/apf.png" alt="Asociación Paraguaya de Fútbol"></span>
+        <span><img src="{base}assets/img/instituciones/conmebol.png" alt="CONMEBOL"></span>
       </div>
-      <p>Rubio Ñu está afiliado a la Asociación Paraguaya de Fútbol, miembro de la CONMEBOL.</p>
+      <p>{t['instituciones']}</p>
     </div>
     <div class="pie-grilla">
       <div class="pie-escudo">
-        <img src="assets/img/escudo.png" alt="">
+        <img src="{base}assets/img/escudo.png" alt="">
         <div>
-          <strong style="color:var(--hueso)">Club Rubio Ñu</strong><br>
-          Barrio Santísima Trinidad, Asunción, Paraguay.<br>
-          Fundado el 24 de agosto de 1913.
+          <strong style="color:var(--blanco)">Club Rubio Ñu</strong><br>
+          {t['pie_direccion']}
         </div>
       </div>
-      <div>
-        <h4>EL CLUB</h4>
-        <ul>
-          <li><a href="club.html">Historia</a></li>
-          <li><a href="club.html#estadio">La Arboleda</a></li>
-          <li><a href="plantel.html">Plantel</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>COMPETENCIA</h4>
-        <ul>
-          <li><a href="fixture.html">Fixture</a></li>
-          <li><a href="fixture.html#tabla">Tabla de posiciones</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>PARTICIPAR</h4>
-        <ul>
-          <li><a href="socios.html">Hacete socio</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="contacto.html#prensa">Prensa</a></li>
-        </ul>
-      </div>
+{columnas}
     </div>
     <div class="pie-legal">
-      <span>© 2026 Club Rubio Ñu. Todos los derechos reservados.</span>
-      <span>Asociación Paraguaya de Fútbol · División de Honor</span>
+      <span>{t['pie_legal']}</span>
+      <span>{t['pie_liga']}</span>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script src="{base}assets/js/main.js"></script>
 </body>
 </html>
 """
 
 
-def escribir(nombre, titulo, descripcion, cuerpo):
-    with open(os.path.join(BASE, nombre), "w", encoding="utf-8") as f:
-        f.write(cabecera(nombre, titulo, descripcion) + cuerpo + pie())
+# ================================================================ CONTENIDO ES
+ES = {}
 
-
-# ---------------------------------------------------------------- INICIO
-INICIO = """
+ES["index"] = """
 <section class="portada">
   <div class="marco portada-contenido">
-    <img class="portada-escudo" src="assets/img/escudo.png" alt="Escudo del Club Rubio Ñu">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="Escudo del Club Rubio Ñu">
     <div>
       <h1>Rubio Ñu</h1>
       <p class="portada-bajada">Blanco por la pureza, verde por la esperanza. El albiverde de
@@ -244,24 +330,7 @@ INICIO = """
       <h2 class="titulo-seccion">Noticias</h2>
       <a class="enlace-mas" href="noticias.html">Ver todas</a>
     </div>
-    <div class="noticias-grilla">
-      <a class="noticia" href="noticias.html">
-        <time datetime="2026-09-01">1 de septiembre de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve de la noticia. Esta sección se carga con el material que envíe el
-        departamento de prensa del club.</p>
-      </a>
-      <a class="noticia" href="noticias.html">
-        <time datetime="2026-08-28">28 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve de la noticia.</p>
-      </a>
-      <a class="noticia" href="noticias.html">
-        <time datetime="2026-08-24">24 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve de la noticia.</p>
-      </a>
-    </div>
+    <div data-noticias data-limite="3"><p class="cargando">Cargando noticias…</p></div>
   </div>
 </section>
 
@@ -282,11 +351,10 @@ INICIO = """
 </section>
 """
 
-# ---------------------------------------------------------------- CLUB
-CLUB = """
+ES["club"] = """
 <section class="portada">
   <div class="marco portada-contenido">
-    <img class="portada-escudo" src="assets/img/escudo.png" alt="">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
     <div>
       <h1>El club</h1>
       <p class="portada-bajada">Un club de barrio con más de un siglo de historia.</p>
@@ -407,11 +475,10 @@ CLUB = """
 </section>
 """
 
-# ---------------------------------------------------------------- PLANTEL
-PLANTEL = """
+ES["plantel"] = """
 <section class="portada">
   <div class="marco portada-contenido">
-    <img class="portada-escudo" src="assets/img/escudo.png" alt="">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
     <div>
       <h1>Plantel 2026</h1>
       <p class="portada-bajada">Los jugadores y el cuerpo técnico de la temporada.</p>
@@ -428,16 +495,15 @@ PLANTEL = """
 <section class="seccion seccion-gris">
   <div class="marco">
     <h2 class="titulo-seccion">Cuerpo técnico</h2>
-    <div class="vacio">Pendiente de carga.</div>
+    <div data-cuerpo-tecnico><p class="cargando">Cargando…</p></div>
   </div>
 </section>
 """
 
-# ---------------------------------------------------------------- FIXTURE
-FIXTURE = """
+ES["fixture"] = """
 <section class="portada">
   <div class="marco portada-contenido">
-    <img class="portada-escudo" src="assets/img/escudo.png" alt="">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
     <div>
       <h1>Fixture y tabla</h1>
       <p class="portada-bajada">Resultados, próximos partidos y posiciones de la División de Honor.</p>
@@ -464,17 +530,16 @@ FIXTURE = """
 <section class="seccion seccion-gris">
   <div class="marco">
     <h2 class="titulo-seccion">Calendario completo</h2>
-    <p class="entrada">Las 22 fechas del torneo, con horarios y sedes.</p>
+    <p class="entrada">Las fechas del torneo, con horarios y sedes.</p>
     <div class="vacio">Pendiente de carga.</div>
   </div>
 </section>
 """
 
-# ---------------------------------------------------------------- NOTICIAS
-NOTICIAS = """
+ES["noticias"] = """
 <section class="portada">
   <div class="marco portada-contenido">
-    <img class="portada-escudo" src="assets/img/escudo.png" alt="">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
     <div>
       <h1>Noticias</h1>
       <p class="portada-bajada">Novedades del primer equipo, las inferiores y la institución.</p>
@@ -484,47 +549,15 @@ NOTICIAS = """
 
 <section class="seccion">
   <div class="marco">
-    <div class="noticias-grilla">
-      <a class="noticia" href="#">
-        <time datetime="2026-09-01">1 de septiembre de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve. Reemplazar por el contenido real del departamento de prensa.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-28">28 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-24">24 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-18">18 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-11">11 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-04">4 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-    </div>
+    <div data-noticias><p class="cargando">Cargando noticias…</p></div>
   </div>
 </section>
 """
 
-# ---------------------------------------------------------------- SOCIOS
-SOCIOS = """
+ES["socios"] = """
 <section class="portada">
   <div class="marco portada-contenido">
-    <img class="portada-escudo" src="assets/img/escudo.png" alt="">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
     <div>
       <h1>Hacete socio</h1>
       <p class="portada-bajada">Sostené al club todo el año y entrá a La Arboleda cada fecha.</p>
@@ -582,11 +615,10 @@ SOCIOS = """
 </section>
 """
 
-# ---------------------------------------------------------------- CONTACTO
-CONTACTO = """
+ES["contacto"] = """
 <section class="portada">
   <div class="marco portada-contenido">
-    <img class="portada-escudo" src="assets/img/escudo.png" alt="">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
     <div>
       <h1>Contacto</h1>
       <p class="portada-bajada">Sede, prensa, sponsors y administración.</p>
@@ -637,19 +669,449 @@ CONTACTO = """
 </section>
 """
 
-escribir("index.html", "Sitio oficial",
-         "Sitio oficial del Club Rubio Ñu, de Santísima Trinidad, Asunción. Fundado en 1913.", INICIO)
-escribir("club.html", "El club",
-         "Historia, estadio y datos institucionales del Club Rubio Ñu.", CLUB)
-escribir("plantel.html", "Plantel",
-         "Plantel y cuerpo técnico del Club Rubio Ñu, temporada 2026.", PLANTEL)
-escribir("fixture.html", "Fixture y tabla",
-         "Fixture, resultados y tabla de posiciones del Club Rubio Ñu.", FIXTURE)
-escribir("noticias.html", "Noticias",
-         "Novedades del Club Rubio Ñu.", NOTICIAS)
-escribir("socios.html", "Hacete socio",
-         "Categorías de socio y alta en el Club Rubio Ñu.", SOCIOS)
-escribir("contacto.html", "Contacto",
-         "Datos de contacto del Club Rubio Ñu.", CONTACTO)
+# ================================================================ CONTENIDO EN
+EN = {}
 
-print("Páginas generadas:", ", ".join(p for p, _ in PAGINAS_MENU))
+EN["index"] = """
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="Club Rubio Ñu crest">
+    <div>
+      <h1>Rubio Ñu</h1>
+      <p class="portada-bajada">White for purity, green for hope. The albiverde of Santísima
+      Trinidad is back in the top flight of Paraguayan football.</p>
+    </div>
+  </div>
+  <div class="marco portada-datos">
+    <span>Founded on <b>24 August 1913</b></span>
+    <span>Stadium <b>La Arboleda</b></span>
+    <span>Asunción, <b>Paraguay</b></span>
+  </div>
+</section>
+
+<section class="franja-partido">
+  <div class="marco partido-grilla">
+    <div data-ultimo><p class="cargando">Loading result…</p></div>
+    <div class="divisoria" aria-hidden="true"></div>
+    <div data-proximos><p class="cargando">Loading fixtures…</p></div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <div class="cabezal-seccion">
+      <div>
+        <h2 class="titulo-seccion">How the Clausura stands</h2>
+        <p class="entrada">First Division standings, updated matchday by matchday.</p>
+      </div>
+      <a class="enlace-mas" href="fixture.html#tabla">Full table and fixtures</a>
+    </div>
+    <div data-tabla="resumida"><p class="cargando">Loading table…</p></div>
+  </div>
+</section>
+
+<section class="seccion seccion-tinta textura-diagonal">
+  <div class="marco">
+    <h2 class="titulo-seccion">The club always comes back</h2>
+    <p class="entrada">Rubio Ñu was born in 1913 in Santísima Trinidad and never left the
+    neighbourhood. Resilience is what defines its history.</p>
+    <div class="hitos">
+      <article class="hito">
+        <div class="hito-anio">1913</div>
+        <div>
+          <h3>The founding</h3>
+          <p>A group of friends founds the club on 24 August and chooses white and green: white for
+          purity, green for hope. That is where the albiverde nickname comes from.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1936</div>
+        <div>
+          <h3>The refounding</h3>
+          <p>After twenty-three years, Itá Ybaté and Flor de Mayo, two clubs from the same
+          neighbourhood, merge with Rubio Ñu to keep it alive.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">2025</div>
+        <div>
+          <h3>Second division champions</h3>
+          <p>The team wins the División Intermedia and seals promotion to the top flight.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">2026</div>
+        <div>
+          <h3>Back in the top flight</h3>
+          <p>Rubio Ñu competes again against the biggest clubs in the country, with La Arboleda as
+          its home ground.</p>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top:2rem"><a class="enlace-mas" href="club.html">The full history</a></p>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <div class="cabezal-seccion">
+      <h2 class="titulo-seccion">News</h2>
+      <a class="enlace-mas" href="noticias.html">See all</a>
+    </div>
+    <div data-noticias data-limite="3"><p class="cargando">Loading news…</p></div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <div class="accion">
+      <div>
+        <h2>Become a member</h2>
+        <p>Members keep the club going all year: they get into La Arboleda, pick their seat and
+        vote at the general assembly.</p>
+      </div>
+      <div class="botonera">
+        <a class="boton" href="socios.html">See the categories</a>
+        <a class="boton boton-borde" href="contacto.html">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+"""
+
+EN["club"] = """
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
+    <div>
+      <h1>The club</h1>
+      <p class="portada-bajada">A neighbourhood club with more than a century of history.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco dos-columnas">
+    <div>
+      <h2 class="titulo-seccion">A neighbourhood club with more than a century of history</h2>
+      <p>Rubio Ñu was born on 24 August 1913 in the neighbourhood of Santísima Trinidad, Asunción,
+      founded by a group of friends who chose white and green as the club colours: white for
+      purity, green for hope. That combination gave the club its nickname, albiverde.</p>
+      <p>In 1936, after twenty-three years, two clubs from the same neighbourhood, Itá Ybaté and
+      Flor de Mayo, merged with Rubio Ñu to keep it alive. That refounding marked the club: always
+      coming back, even after the losses.</p>
+      <p>The club plays its home matches at Estadio La Arboleda, and holds a historic rivalry with
+      Sportivo Trinidense in the Clásico de Trinidad. Its players and supporters are known as
+      ñuenses.</p>
+    </div>
+    <div>
+      <h3 style="font-size:1.1rem;color:var(--verde-hondo);margin-bottom:1rem">Values</h3>
+      <ul class="lista-marca">
+        <li>Resilience: the club always comes back.</li>
+        <li>Neighbourhood identity, in Santísima Trinidad.</li>
+        <li>Developing young talent.</li>
+        <li>South American reach.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-verde">
+  <div class="marco dos-columnas">
+    <p class="cita-mision">A historic neighbourhood club that honours more than a hundred years of
+    resilience and aims to establish itself in the top flight.</p>
+    <p class="entrada" style="margin:0">The club's mission is to develop and export Paraguayan and
+    South American talent, sustaining sporting and institutional growth without losing the identity
+    of Santísima Trinidad.</p>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <h2 class="titulo-seccion">Club facts</h2>
+    <dl class="datos-grilla">
+      <div class="dato"><dt>Founded</dt><dd>24 August 1913</dd></div>
+      <div class="dato"><dt>Neighbourhood</dt><dd>Santísima Trinidad</dd></div>
+      <div class="dato"><dt>City</dt><dd>Asunción, Paraguay</dd></div>
+      <div class="dato"><dt>Stadium</dt><dd>La Arboleda</dd></div>
+      <div class="dato"><dt>Nicknames</dt><dd>Albiverde, Ñuenses, Laureado</dd></div>
+      <div class="dato"><dt>Derby</dt><dd>Sportivo Trinidense</dd></div>
+      <div class="dato"><dt>2026 division</dt><dd>First Division</dd></div>
+      <div class="dato"><dt>Association</dt><dd>APF</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="seccion seccion-tinta textura-diagonal">
+  <div class="marco">
+    <h2 class="titulo-seccion">Timeline</h2>
+    <div class="hitos">
+      <article class="hito">
+        <div class="hito-anio">1913</div>
+        <div>
+          <h3>The founding</h3>
+          <p>A group of friends founds the club on 24 August in Santísima Trinidad and chooses
+          white and green as its colours.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1936</div>
+        <div>
+          <h3>The refounding</h3>
+          <p>Itá Ybaté and Flor de Mayo, two clubs from the same neighbourhood, merge with Rubio Ñu
+          to keep it alive.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">2025</div>
+        <div>
+          <h3>División Intermedia champions</h3>
+          <p>The club wins the Paraguayan second division and earns promotion to the top flight.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">2026</div>
+        <div>
+          <h3>Top-flight season</h3>
+          <p>Rubio Ñu plays the Apertura and Clausura tournaments of the First Division.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="estadio">
+  <div class="marco">
+    <h2 class="titulo-seccion">La Arboleda</h2>
+    <p class="entrada">The club's ground, in the same neighbourhood where it was founded. Rubio Ñu
+    plays every home match here.</p>
+    <dl class="datos-grilla">
+      <div class="dato"><dt>Location</dt><dd>Santísima Trinidad</dd></div>
+      <div class="dato"><dt>Capacity</dt><dd>To be confirmed</dd></div>
+      <div class="dato"><dt>Surface</dt><dd>Natural grass</dd></div>
+      <div class="dato"><dt>Opened</dt><dd>To be confirmed</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="seccion seccion-gris" id="comision">
+  <div class="marco">
+    <h2 class="titulo-seccion">Board of directors</h2>
+    <p class="entrada">The full board is published on this page.</p>
+    <div class="vacio">To be added.</div>
+  </div>
+</section>
+"""
+
+EN["plantel"] = """
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
+    <div>
+      <h1>2026 squad</h1>
+      <p class="portada-bajada">The players and coaching staff for the season.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <div data-plantel><p class="cargando">Loading squad…</p></div>
+  </div>
+</section>
+
+<section class="seccion seccion-gris">
+  <div class="marco">
+    <h2 class="titulo-seccion">Coaching staff</h2>
+    <div data-cuerpo-tecnico><p class="cargando">Loading…</p></div>
+  </div>
+</section>
+"""
+
+EN["fixture"] = """
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
+    <div>
+      <h1>Fixtures and table</h1>
+      <p class="portada-bajada">Results, upcoming matches and First Division standings.</p>
+    </div>
+  </div>
+</section>
+
+<section class="franja-partido">
+  <div class="marco partido-grilla">
+    <div data-ultimo><p class="cargando">Loading result…</p></div>
+    <div class="divisoria" aria-hidden="true"></div>
+    <div data-proximos><p class="cargando">Loading fixtures…</p></div>
+  </div>
+</section>
+
+<section class="seccion" id="tabla">
+  <div class="marco">
+    <h2 class="titulo-seccion">League table</h2>
+    <p class="entrada">First Division, Clausura 2026.</p>
+    <div data-tabla="completa"><p class="cargando">Loading table…</p></div>
+  </div>
+</section>
+
+<section class="seccion seccion-gris">
+  <div class="marco">
+    <h2 class="titulo-seccion">Full calendar</h2>
+    <p class="entrada">Every matchday of the tournament, with kick-off times and venues.</p>
+    <div class="vacio">To be added.</div>
+  </div>
+</section>
+"""
+
+EN["noticias"] = """
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
+    <div>
+      <h1>News</h1>
+      <p class="portada-bajada">Updates from the first team, the academy and the club.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <div data-noticias><p class="cargando">Loading news…</p></div>
+  </div>
+</section>
+"""
+
+EN["socios"] = """
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
+    <div>
+      <h1>Become a member</h1>
+      <p class="portada-bajada">Support the club all year and get into La Arboleda every matchday.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <h2 class="titulo-seccion">Categories</h2>
+    <p class="entrada">Fees, benefits and payment methods are confirmed with the club
+    administration before this page is published.</p>
+    <dl class="datos-grilla">
+      <div class="dato"><dt>Full member</dt><dd>Fee to be confirmed</dd></div>
+      <div class="dato"><dt>Junior member</dt><dd>Fee to be confirmed</dd></div>
+      <div class="dato"><dt>Associate member</dt><dd>Fee to be confirmed</dd></div>
+      <div class="dato"><dt>Life member</dt><dd>Fee to be confirmed</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="seccion seccion-gris">
+  <div class="marco">
+    <h2 class="titulo-seccion">Sign up</h2>
+    <p class="entrada">Leave your details and the club administration will get in touch to
+    complete your membership.</p>
+    <form class="formulario" method="post" action="#">
+      <div class="campo">
+        <label for="s-nombre">Full name</label>
+        <input id="s-nombre" name="nombre" type="text" required>
+      </div>
+      <div class="campo">
+        <label for="s-ci">ID number</label>
+        <input id="s-ci" name="ci" type="text" required>
+      </div>
+      <div class="campo">
+        <label for="s-mail">Email</label>
+        <input id="s-mail" name="email" type="email" required>
+      </div>
+      <div class="campo">
+        <label for="s-tel">Phone</label>
+        <input id="s-tel" name="telefono" type="tel">
+      </div>
+      <div class="campo">
+        <label for="s-cat">Category</label>
+        <select id="s-cat" name="categoria">
+          <option>Full member</option>
+          <option>Junior member</option>
+          <option>Associate member</option>
+          <option>Life member</option>
+        </select>
+      </div>
+      <div><button class="boton" type="submit">Send request</button></div>
+    </form>
+  </div>
+</section>
+"""
+
+EN["contacto"] = """
+<section class="portada">
+  <div class="marco portada-contenido">
+    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
+    <div>
+      <h1>Contact</h1>
+      <p class="portada-bajada">Club offices, press, sponsors and administration.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="marco">
+    <h2 class="titulo-seccion">Where to find us</h2>
+    <dl class="datos-grilla">
+      <div class="dato"><dt>Offices</dt><dd>Santísima Trinidad, Asunción</dd></div>
+      <div class="dato"><dt>Phone</dt><dd>To be confirmed</dd></div>
+      <div class="dato"><dt>Email</dt><dd>To be confirmed</dd></div>
+      <div class="dato"><dt>Opening hours</dt><dd>To be confirmed</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="seccion seccion-gris" id="prensa">
+  <div class="marco">
+    <h2 class="titulo-seccion">Write to us</h2>
+    <form class="formulario" method="post" action="#">
+      <div class="campo">
+        <label for="c-nombre">Name</label>
+        <input id="c-nombre" name="nombre" type="text" required>
+      </div>
+      <div class="campo">
+        <label for="c-mail">Email</label>
+        <input id="c-mail" name="email" type="email" required>
+      </div>
+      <div class="campo">
+        <label for="c-motivo">Subject</label>
+        <select id="c-motivo" name="motivo">
+          <option>General enquiry</option>
+          <option>Press</option>
+          <option>Sponsorship and commercial</option>
+          <option>Academy and scouting</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="c-mensaje">Message</label>
+        <textarea id="c-mensaje" name="mensaje" required></textarea>
+      </div>
+      <div><button class="boton" type="submit">Send message</button></div>
+    </form>
+  </div>
+</section>
+"""
+
+CONTENIDO = {"es": ES, "en": EN}
+
+
+def construir():
+    os.makedirs(os.path.join(BASE, "en"), exist_ok=True)
+    for idioma in IDIOMAS:
+        base = prefijo(idioma)
+        for pagina in PAGINAS:
+            cuerpo = CONTENIDO[idioma][pagina].replace("{base}", base)
+            html = cabecera(idioma, pagina) + cuerpo + pie(idioma)
+            with open(ruta_salida(idioma, pagina), "w", encoding="utf-8") as f:
+                f.write(html)
+        print(idioma, "→", len(PAGINAS), "páginas")
+
+
+if __name__ == "__main__":
+    construir()

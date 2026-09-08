@@ -1,20 +1,243 @@
 {
-  "torneo": "Torneo Clausura 2026",
+  "torneo": {
+    "es": "Torneo Clausura 2026",
+    "en": "Clausura 2026"
+  },
   "fecha_jugada": 8,
   "actualizado": "2026-09-03",
-  "fuente": "APF",
+  "fuente": {
+    "es": "APF",
+    "en": "APF"
+  },
   "equipos": [
-    { "pos": 1,  "equipo": "2 de Mayo",           "pj": 8, "g": 5, "e": 3, "p": 0, "gf": 10, "gc": 5,  "dg": 5,   "pts": 18, "forma": ["G","G","E","G","E"] },
-    { "pos": 2,  "equipo": "Libertad",            "pj": 8, "g": 5, "e": 1, "p": 2, "gf": 12, "gc": 9,  "dg": 3,   "pts": 16, "forma": ["G","G","G","E","P"] },
-    { "pos": 3,  "equipo": "Nacional",            "pj": 8, "g": 4, "e": 3, "p": 1, "gf": 14, "gc": 5,  "dg": 9,   "pts": 15, "forma": ["E","E","G","G","G"] },
-    { "pos": 4,  "equipo": "Sportivo Trinidense", "pj": 8, "g": 4, "e": 2, "p": 2, "gf": 14, "gc": 6,  "dg": 8,   "pts": 14, "forma": ["P","E","E","P","G"] },
-    { "pos": 5,  "equipo": "Olimpia",             "pj": 8, "g": 4, "e": 1, "p": 3, "gf": 12, "gc": 8,  "dg": 4,   "pts": 13, "forma": ["P","G","G","G","E"] },
-    { "pos": 6,  "equipo": "Guaraní",             "pj": 8, "g": 2, "e": 4, "p": 2, "gf": 8,  "gc": 8,  "dg": 0,   "pts": 10, "forma": ["E","P","E","E","E"] },
-    { "pos": 7,  "equipo": "Sportivo Ameliano",   "pj": 8, "g": 2, "e": 4, "p": 2, "gf": 9,  "gc": 10, "dg": -1,  "pts": 10, "forma": ["G","P","G","E","P"] },
-    { "pos": 8,  "equipo": "Sportivo Luqueño",    "pj": 8, "g": 3, "e": 1, "p": 4, "gf": 10, "gc": 15, "dg": -5,  "pts": 10, "forma": ["G","P","P","G","E"] },
-    { "pos": 9,  "equipo": "Rubio Ñu",            "pj": 8, "g": 2, "e": 2, "p": 4, "gf": 9,  "gc": 15, "dg": -6,  "pts": 8,  "forma": ["P","G","E","P","G"], "esNosotros": true },
-    { "pos": 10, "equipo": "Cerro Porteño",       "pj": 7, "g": 2, "e": 1, "p": 4, "gf": 8,  "gc": 8,  "dg": 0,   "pts": 7,  "forma": ["G","P","G","P","E"] },
-    { "pos": 11, "equipo": "Deportivo Recoleta",  "pj": 7, "g": 2, "e": 1, "p": 4, "gf": 11, "gc": 15, "dg": -4,  "pts": 7,  "forma": ["G","G","P","P","P"] },
-    { "pos": 12, "equipo": "Sportivo San Lorenzo","pj": 8, "g": 0, "e": 1, "p": 7, "gf": 2,  "gc": 15, "dg": -13, "pts": 1,  "forma": ["P","P","P","P","P"] }
+    {
+      "pos": 1,
+      "equipo": "2 de Mayo",
+      "pj": 8,
+      "g": 5,
+      "e": 3,
+      "p": 0,
+      "gf": 10,
+      "gc": 5,
+      "dg": 5,
+      "pts": 18,
+      "forma": [
+        "G",
+        "G",
+        "E",
+        "G",
+        "E"
+      ]
+    },
+    {
+      "pos": 2,
+      "equipo": "Libertad",
+      "pj": 8,
+      "g": 5,
+      "e": 1,
+      "p": 2,
+      "gf": 12,
+      "gc": 9,
+      "dg": 3,
+      "pts": 16,
+      "forma": [
+        "G",
+        "G",
+        "G",
+        "E",
+        "P"
+      ]
+    },
+    {
+      "pos": 3,
+      "equipo": "Nacional",
+      "pj": 8,
+      "g": 4,
+      "e": 3,
+      "p": 1,
+      "gf": 14,
+      "gc": 5,
+      "dg": 9,
+      "pts": 15,
+      "forma": [
+        "E",
+        "E",
+        "G",
+        "G",
+        "G"
+      ]
+    },
+    {
+      "pos": 4,
+      "equipo": "Sportivo Trinidense",
+      "pj": 8,
+      "g": 4,
+      "e": 2,
+      "p": 2,
+      "gf": 14,
+      "gc": 6,
+      "dg": 8,
+      "pts": 14,
+      "forma": [
+        "P",
+        "E",
+        "E",
+        "P",
+        "G"
+      ]
+    },
+    {
+      "pos": 5,
+      "equipo": "Olimpia",
+      "pj": 8,
+      "g": 4,
+      "e": 1,
+      "p": 3,
+      "gf": 12,
+      "gc": 8,
+      "dg": 4,
+      "pts": 13,
+      "forma": [
+        "P",
+        "G",
+        "G",
+        "G",
+        "E"
+      ]
+    },
+    {
+      "pos": 6,
+      "equipo": "Guaraní",
+      "pj": 8,
+      "g": 2,
+      "e": 4,
+      "p": 2,
+      "gf": 8,
+      "gc": 8,
+      "dg": 0,
+      "pts": 10,
+      "forma": [
+        "E",
+        "P",
+        "E",
+        "E",
+        "E"
+      ]
+    },
+    {
+      "pos": 7,
+      "equipo": "Sportivo Ameliano",
+      "pj": 8,
+      "g": 2,
+      "e": 4,
+      "p": 2,
+      "gf": 9,
+      "gc": 10,
+      "dg": -1,
+      "pts": 10,
+      "forma": [
+        "G",
+        "P",
+        "G",
+        "E",
+        "P"
+      ]
+    },
+    {
+      "pos": 8,
+      "equipo": "Sportivo Luqueño",
+      "pj": 8,
+      "g": 3,
+      "e": 1,
+      "p": 4,
+      "gf": 10,
+      "gc": 15,
+      "dg": -5,
+      "pts": 10,
+      "forma": [
+        "G",
+        "P",
+        "P",
+        "G",
+        "E"
+      ]
+    },
+    {
+      "pos": 9,
+      "equipo": "Rubio Ñu",
+      "pj": 8,
+      "g": 2,
+      "e": 2,
+      "p": 4,
+      "gf": 9,
+      "gc": 15,
+      "dg": -6,
+      "pts": 8,
+      "forma": [
+        "P",
+        "G",
+        "E",
+        "P",
+        "G"
+      ],
+      "esNosotros": true
+    },
+    {
+      "pos": 10,
+      "equipo": "Cerro Porteño",
+      "pj": 7,
+      "g": 2,
+      "e": 1,
+      "p": 4,
+      "gf": 8,
+      "gc": 8,
+      "dg": 0,
+      "pts": 7,
+      "forma": [
+        "G",
+        "P",
+        "G",
+        "P",
+        "E"
+      ]
+    },
+    {
+      "pos": 11,
+      "equipo": "Deportivo Recoleta",
+      "pj": 7,
+      "g": 2,
+      "e": 1,
+      "p": 4,
+      "gf": 11,
+      "gc": 15,
+      "dg": -4,
+      "pts": 7,
+      "forma": [
+        "G",
+        "G",
+        "P",
+        "P",
+        "P"
+      ]
+    },
+    {
+      "pos": 12,
+      "equipo": "Sportivo San Lorenzo",
+      "pj": 8,
+      "g": 0,
+      "e": 1,
+      "p": 7,
+      "gf": 2,
+      "gc": 15,
+      "dg": -13,
+      "pts": 1,
+      "forma": [
+        "P",
+        "P",
+        "P",
+        "P",
+        "P"
+      ]
+    }
   ]
 }

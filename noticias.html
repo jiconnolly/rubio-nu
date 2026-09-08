@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="es-PY">
+<html lang="es-PY" data-base="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Noticias · Club Rubio Ñu</title>
 <meta name="description" content="Novedades del Club Rubio Ñu.">
 <meta name="robots" content="noindex, nofollow">
+<link rel="alternate" hreflang="es" href="noticias.html">
+<link rel="alternate" hreflang="en" href="en/noticias.html">
 <meta property="og:title" content="Noticias · Club Rubio Ñu">
 <meta property="og:description" content="Novedades del Club Rubio Ñu.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/img/escudo.png">
 <meta name="theme-color" content="#10201A">
-<link rel="icon" href="assets/img/escudo.png">
+<link rel="icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
@@ -28,8 +30,11 @@
         <small>ASUNCIÓN 1913</small>
       </span>
     </a>
-    <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal">Menú</button>
-    <nav class="menu" id="menu-principal" aria-label="Principal">
+    <div class="cabecera-derecha">
+      <a class="idioma" href="en/noticias.html">English</a>
+      <button class="menu-boton" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+    </div>
+    <nav class="menu" id="menu-principal" aria-label="Menú">
         <a href="index.html">Inicio</a>
         <a href="club.html">El club</a>
         <a href="plantel.html">Plantel</a>
@@ -56,38 +61,7 @@
 
 <section class="seccion">
   <div class="marco">
-    <div class="noticias-grilla">
-      <a class="noticia" href="#">
-        <time datetime="2026-09-01">1 de septiembre de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve. Reemplazar por el contenido real del departamento de prensa.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-28">28 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-24">24 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-18">18 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-11">11 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-      <a class="noticia" href="#">
-        <time datetime="2026-08-04">4 de agosto de 2026</time>
-        <h3>Título de la nota</h3>
-        <p>Bajada breve.</p>
-      </a>
-    </div>
+    <div data-noticias><p class="cargando">Cargando noticias…</p></div>
   </div>
 </section>
 <section class="banda-sponsors">
@@ -118,9 +92,8 @@
       <div class="pie-escudo">
         <img src="assets/img/escudo.png" alt="">
         <div>
-          <strong style="color:var(--hueso)">Club Rubio Ñu</strong><br>
-          Barrio Santísima Trinidad, Asunción, Paraguay.<br>
-          Fundado el 24 de agosto de 1913.
+          <strong style="color:var(--blanco)">Club Rubio Ñu</strong><br>
+          Barrio Santísima Trinidad, Asunción, Paraguay.<br>Fundado el 24 de agosto de 1913.
         </div>
       </div>
       <div>
