@@ -408,15 +408,16 @@ ES["club"] = """
     <div>
       <h2 class="titulo-seccion">De dónde viene el nombre</h2>
       <p style="color:rgba(255,255,255,0.78)">El 16 de agosto de 1869, en la Guerra de la Triple
-      Alianza, un ejército paraguayo compuesto en su mayoría por niños resistió durante horas en un
-      campo del interior. Aquella batalla se conoce como Acosta Ñu, y por ella el 16 de agosto es
-      el Día del Niño en Paraguay.</p>
-      <p style="color:rgba(255,255,255,0.78)">Durante mucho tiempo se creyó que el combate había
-      ocurrido en un potrero vecino llamado Rubio Ñu. Recién más tarde se estableció que fue unos
-      kilómetros más allá, en el campo de Acosta, y ese nombre quedó como el oficial de la batalla.</p>
-      <p style="color:rgba(255,255,255,0.78)">Cuando en 1913 un grupo de muchachos de Santísima
-      Trinidad, todos menores de dieciocho años, fundó su club, lo llamó Rubio Ñu. El nombre y los
-      colores fueron un homenaje a esos chicos. <em>Ñu</em> es campo en guaraní.</p>
+      Alianza, un ejército paraguayo compuesto en buena parte por niños resistió en Barrero Grande,
+      la actual ciudad de Eusebio Ayala. Se la recuerda como la batalla de los niños.</p>
+      <p style="color:rgba(255,255,255,0.78)">Durante décadas ese combate se llamó Rubio Ñu. El
+      error venía de un poema del sacerdote Juan B. Tournedou y se repitió hasta 1948, cuando el
+      historiador Andrés Aguirre consiguió por decreto que se lo llamara Acosta Ñu, el nombre de
+      los campos donde efectivamente ocurrió, y que el 16 de agosto fuera el Día del Niño.</p>
+      <p style="color:rgba(255,255,255,0.78)">El club se fundó en 1913, treinta y cinco años antes
+      de esa corrección. Un grupo de muchachos de Santísima Trinidad, todos menores de dieciocho
+      años, le puso a su club el nombre con el que entonces se conocía la batalla, y eligió el
+      blanco y el verde como homenaje a esos chicos. <em>Ñu</em> es campo en guaraní.</p>
     </div>
     <div>
       <p class="cita-mision" style="color:var(--verde);max-width:20ch">Chicos que le pusieron a su
@@ -546,7 +547,7 @@ ES["club"] = """
     </figure>
     <dl class="datos-grilla">
       <div class="dato"><dt>Ubicación</dt><dd>Santísima Trinidad</dd></div>
-      <div class="dato"><dt>Capacidad</dt><dd>Por confirmar</dd></div>
+      <div class="dato"><dt>Capacidad</dt><dd>8.000 personas</dd></div>
       <div class="dato"><dt>Superficie</dt><dd>Césped natural</dd></div>
       <div class="dato"><dt>Inauguración</dt><dd>Por confirmar</dd></div>
     </dl>
@@ -949,15 +950,16 @@ EN["club"] = """
     <div>
       <h2 class="titulo-seccion">Where the name comes from</h2>
       <p style="color:rgba(255,255,255,0.78)">On 16 August 1869, during the War of the Triple
-      Alliance, a Paraguayan army made up mostly of children held out for hours on a field in the
-      countryside. That battle is known as Acosta Ñu, and because of it 16 August is Children's Day
-      in Paraguay.</p>
-      <p style="color:rgba(255,255,255,0.78)">For a long time it was believed the fighting had
-      taken place on a neighbouring field called Rubio Ñu. Only later was it established that it
-      happened a few kilometres away, on the Acosta field, and that name became the official one.</p>
-      <p style="color:rgba(255,255,255,0.78)">When a group of boys from Santísima Trinidad, all
-      under eighteen, founded their club in 1913, they named it Rubio Ñu. The name and the colours
-      were a tribute to those children. <em>Ñu</em> means field in Guaraní.</p>
+      Alliance, a Paraguayan army largely made up of children held out at Barrero Grande, today the
+      city of Eusebio Ayala. It is remembered as the battle of the children.</p>
+      <p style="color:rgba(255,255,255,0.78)">For decades that battle was called Rubio Ñu. The
+      mistake came from a poem by the priest Juan B. Tournedou and was repeated until 1948, when
+      the historian Andrés Aguirre secured a decree renaming it Acosta Ñu, after the fields where
+      it actually took place, and making 16 August Children's Day.</p>
+      <p style="color:rgba(255,255,255,0.78)">The club was founded in 1913, thirty-five years
+      before that correction. A group of boys from Santísima Trinidad, all under eighteen, named
+      their club after the battle as it was known at the time, and chose white and green in tribute
+      to those children. <em>Ñu</em> means field in Guaraní.</p>
     </div>
     <div>
       <p class="cita-mision" style="color:var(--verde);max-width:22ch">Boys who named their club
@@ -1087,7 +1089,7 @@ EN["club"] = """
     </figure>
     <dl class="datos-grilla">
       <div class="dato"><dt>Location</dt><dd>Santísima Trinidad</dd></div>
-      <div class="dato"><dt>Capacity</dt><dd>To be confirmed</dd></div>
+      <div class="dato"><dt>Capacity</dt><dd>8,000</dd></div>
       <div class="dato"><dt>Surface</dt><dd>Natural grass</dd></div>
       <div class="dato"><dt>Opened</dt><dd>To be confirmed</dd></div>
     </dl>
