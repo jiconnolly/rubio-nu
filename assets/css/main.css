@@ -457,9 +457,31 @@ table.posiciones td.pts { font-weight: 700; }
   overflow: hidden;
 }
 .portada-foto .fondo {
-  position: absolute; inset: 0;
+  position: absolute; inset: -2%;
   background-size: cover;
   background-position: center 30%;
+  transform-origin: 52% 46%;
+  will-change: transform;
+  animation: sobrevuelo 54s ease-in-out infinite alternate;
+}
+
+/* Sobrevuelo: avance lento con deriva diagonal, como un drone cruzando la cancha. */
+@keyframes sobrevuelo {
+  from { transform: scale(1.04) translate3d(-1.1%, 0.7%, 0); }
+  to   { transform: scale(1.15) translate3d(1.1%, -0.7%, 0); }
+}
+
+.banda-foto .fondo {
+  animation: sobrevuelo-corto 68s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes sobrevuelo-corto {
+  from { transform: scale(1.03) translate3d(0.8%, 0, 0); }
+  to   { transform: scale(1.11) translate3d(-0.8%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portada-foto .fondo, .banda-foto .fondo { animation: none; transform: none; }
 }
 .portada-foto .velo {
   position: absolute; inset: 0;
@@ -530,7 +552,7 @@ table.posiciones td.pts { font-weight: 700; }
   background: var(--tinta);
   overflow: hidden;
 }
-.banda-foto .fondo { position: absolute; inset: 0; background-size: cover; background-position: center 60%; }
+.banda-foto .fondo { position: absolute; inset: -2%; background-size: cover; background-position: center 60%; }
 .banda-foto .velo {
   position: absolute; inset: 0;
   background: linear-gradient(260deg, rgba(16,32,26,0.9) 0%, rgba(16,32,26,0.68) 42%, rgba(16,32,26,0.2) 100%);
