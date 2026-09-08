@@ -51,7 +51,7 @@ CHROME = {
         "instituciones": "Rubio Ñu está afiliado a la Asociación Paraguaya de Fútbol, miembro de la CONMEBOL.",
         "pie_direccion": "Barrio Santísima Trinidad, Asunción, Paraguay.<br>Fundado el 24 de agosto de 1913.",
         "pie_columnas": [
-            ("EL CLUB", [("club", "Historia"), ("club#estadio", "La Arboleda"), ("plantel", "Plantel")]),
+            ("EL CLUB", [("club", "Historia"), ("club#nombre", "El nombre"), ("club#estadio", "La Arboleda"), ("plantel", "Plantel")]),
             ("COMPETENCIA", [("fixture", "Fixture"), ("fixture#tabla", "Tabla de posiciones"), ("noticias", "Noticias")]),
             ("PARTICIPAR", [("socios", "Hacete socio"), ("contacto", "Contacto"), ("contacto#prensa", "Prensa")]),
         ],
@@ -67,7 +67,7 @@ CHROME = {
         "instituciones": "Rubio Ñu is affiliated to the Paraguayan Football Association, a member of CONMEBOL.",
         "pie_direccion": "Santísima Trinidad, Asunción, Paraguay.<br>Founded on 24 August 1913.",
         "pie_columnas": [
-            ("THE CLUB", [("club", "History"), ("club#estadio", "La Arboleda"), ("plantel", "Squad")]),
+            ("THE CLUB", [("club", "History"), ("club#nombre", "The name"), ("club#estadio", "La Arboleda"), ("plantel", "Squad")]),
             ("COMPETITION", [("fixture", "Fixtures"), ("fixture#tabla", "League table"), ("noticias", "News")]),
             ("GET INVOLVED", [("socios", "Membership"), ("contacto", "Contact"), ("contacto#prensa", "Press")]),
         ],
@@ -307,8 +307,8 @@ ES["index"] = """
         <div class="hito-anio">1913</div>
         <div>
           <h3>La fundación</h3>
-          <p>Un grupo de amigos funda el club el 24 de agosto y elige el blanco y el verde:
-          blanco por la pureza, verde por la esperanza. De ahí viene el apodo albiverde.</p>
+          <p>Un grupo de muchachos, todos menores de dieciocho años, funda el club el 24 de agosto
+          y lo llama como el campo donde se creía que habían peleado los niños de Acosta Ñu.</p>
         </div>
       </article>
       <article class="hito">
@@ -403,6 +403,30 @@ ES["club"] = """
   </div>
 </section>
 
+<section class="seccion seccion-tinta" id="nombre">
+  <div class="marco dos-columnas">
+    <div>
+      <h2 class="titulo-seccion">De dónde viene el nombre</h2>
+      <p style="color:rgba(255,255,255,0.78)">El 16 de agosto de 1869, en la Guerra de la Triple
+      Alianza, un ejército paraguayo compuesto en su mayoría por niños resistió durante horas en un
+      campo del interior. Aquella batalla se conoce como Acosta Ñu, y por ella el 16 de agosto es
+      el Día del Niño en Paraguay.</p>
+      <p style="color:rgba(255,255,255,0.78)">Durante mucho tiempo se creyó que el combate había
+      ocurrido en un potrero vecino llamado Rubio Ñu. Recién más tarde se estableció que fue unos
+      kilómetros más allá, en el campo de Acosta, y ese nombre quedó como el oficial de la batalla.</p>
+      <p style="color:rgba(255,255,255,0.78)">Cuando en 1913 un grupo de muchachos de Santísima
+      Trinidad, todos menores de dieciocho años, fundó su club, lo llamó Rubio Ñu. El nombre y los
+      colores fueron un homenaje a esos chicos. <em>Ñu</em> es campo en guaraní.</p>
+    </div>
+    <div>
+      <p class="cita-mision" style="color:var(--verde);max-width:20ch">Chicos que le pusieron a su
+      club el nombre de otros chicos</p>
+      <p style="color:rgba(255,255,255,0.6);font-size:0.88rem;margin-top:1.25rem">Esta sección
+      espera la validación del archivo histórico del club.</p>
+    </div>
+  </div>
+</section>
+
 <section class="seccion seccion-verde">
   <div class="marco dos-columnas">
     <p class="cita-mision">Un club histórico de barrio que honra su resiliencia de más de cien
@@ -437,8 +461,31 @@ ES["club"] = """
         <div class="hito-anio">1913</div>
         <div>
           <h3>La fundación</h3>
-          <p>Un grupo de amigos funda el club el 24 de agosto en Santísima Trinidad y elige el
-          blanco y el verde como colores.</p>
+          <p>Un grupo de muchachos menores de dieciocho años funda el club el 24 de agosto en
+          Santísima Trinidad, en homenaje a los niños de Acosta Ñu, y elige el blanco y el verde.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1926</div>
+        <div>
+          <h3>Primer título</h3>
+          <p>Rubio Ñu se corona campeón de la División Intermedia por primera vez y sube a la
+          categoría principal.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1927</div>
+        <div>
+          <h3>Debut en Primera</h3>
+          <p>El club juega su primera temporada en la máxima categoría del fútbol paraguayo.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1932</div>
+        <div>
+          <h3>La Guerra del Chaco</h3>
+          <p>La institución suspende sus actividades: dirigentes y deportistas pasan a integrar el
+          ejército en campaña. El club retoma su curso al terminar la contienda.</p>
         </div>
       </article>
       <article class="hito">
@@ -447,6 +494,22 @@ ES["club"] = """
           <h3>La refundación</h3>
           <p>Itá Ybaté y Flor de Mayo, dos clubes del mismo barrio, se fusionan con Rubio Ñu para
           mantenerlo con vida.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1963</div>
+        <div>
+          <h3>Campeón invicto</h3>
+          <p>Gana la segunda división sin perder un partido y supera la promoción para volver a
+          Primera.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">2009</div>
+        <div>
+          <h3>El regreso y el mejor puesto</h3>
+          <p>Vuelve a la División de Honor tras veintiocho años de ausencia y firma su mejor
+          campaña histórica en la máxima categoría.</p>
         </div>
       </article>
       <article class="hito">
@@ -487,6 +550,32 @@ ES["club"] = """
       <div class="dato"><dt>Superficie</dt><dd>Césped natural</dd></div>
       <div class="dato"><dt>Inauguración</dt><dd>Por confirmar</dd></div>
     </dl>
+  </div>
+</section>
+
+<section class="seccion" id="palmares">
+  <div class="marco dos-columnas">
+    <div>
+      <h2 class="titulo-seccion">Palmarés</h2>
+      <p class="entrada">La historia de Rubio Ñu no es una vitrina de títulos grandes: es la de un
+      club que se cayó muchas veces y siempre volvió a subir.</p>
+      <ul class="lista-marca">
+        <li>Campeón de la División Intermedia en 1926, 1941, 1954, 1961, 1963, 1972, 2008 y 2025.</li>
+        <li>Mejor campaña en la máxima categoría: cuarto puesto en el Clausura 2009.</li>
+        <li>Premio Guaraní al mejor equipo del año, 2009.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:1.1rem;color:var(--verde-hondo);margin-bottom:1rem">Actividades del club</h3>
+      <ul class="lista-marca">
+        <li>Fútbol profesional</li>
+        <li>Fútbol senior y amateur</li>
+        <li>Escuela de fútbol</li>
+        <li>Futsal</li>
+        <li>Fútbol de playa</li>
+        <li>Pádel</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -759,8 +848,8 @@ EN["index"] = """
         <div class="hito-anio">1913</div>
         <div>
           <h3>The founding</h3>
-          <p>A group of friends founds the club on 24 August and chooses white and green: white for
-          purity, green for hope. That is where the albiverde nickname comes from.</p>
+          <p>A group of boys, all under eighteen, founds the club on 24 August and names it after
+          the field where the children of Acosta Ñu were believed to have fought.</p>
         </div>
       </article>
       <article class="hito">
@@ -855,6 +944,30 @@ EN["club"] = """
   </div>
 </section>
 
+<section class="seccion seccion-tinta" id="nombre">
+  <div class="marco dos-columnas">
+    <div>
+      <h2 class="titulo-seccion">Where the name comes from</h2>
+      <p style="color:rgba(255,255,255,0.78)">On 16 August 1869, during the War of the Triple
+      Alliance, a Paraguayan army made up mostly of children held out for hours on a field in the
+      countryside. That battle is known as Acosta Ñu, and because of it 16 August is Children's Day
+      in Paraguay.</p>
+      <p style="color:rgba(255,255,255,0.78)">For a long time it was believed the fighting had
+      taken place on a neighbouring field called Rubio Ñu. Only later was it established that it
+      happened a few kilometres away, on the Acosta field, and that name became the official one.</p>
+      <p style="color:rgba(255,255,255,0.78)">When a group of boys from Santísima Trinidad, all
+      under eighteen, founded their club in 1913, they named it Rubio Ñu. The name and the colours
+      were a tribute to those children. <em>Ñu</em> means field in Guaraní.</p>
+    </div>
+    <div>
+      <p class="cita-mision" style="color:var(--verde);max-width:22ch">Boys who named their club
+      after other boys</p>
+      <p style="color:rgba(255,255,255,0.6);font-size:0.88rem;margin-top:1.25rem">This section is
+      pending validation by the club's historical archive.</p>
+    </div>
+  </div>
+</section>
+
 <section class="seccion seccion-verde">
   <div class="marco dos-columnas">
     <p class="cita-mision">A historic neighbourhood club that honours more than a hundred years of
@@ -889,8 +1002,31 @@ EN["club"] = """
         <div class="hito-anio">1913</div>
         <div>
           <h3>The founding</h3>
-          <p>A group of friends founds the club on 24 August in Santísima Trinidad and chooses
-          white and green as its colours.</p>
+          <p>A group of boys under eighteen founds the club on 24 August in Santísima Trinidad, in
+          tribute to the children of Acosta Ñu, and chooses white and green.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1926</div>
+        <div>
+          <h3>First title</h3>
+          <p>Rubio Ñu wins the División Intermedia for the first time and moves up to the top
+          division.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1927</div>
+        <div>
+          <h3>Top-flight debut</h3>
+          <p>The club plays its first season in the highest division of Paraguayan football.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1932</div>
+        <div>
+          <h3>The Chaco War</h3>
+          <p>The club suspends its activities: officials and athletes join the army in the field.
+          It resumes once the war is over.</p>
         </div>
       </article>
       <article class="hito">
@@ -899,6 +1035,22 @@ EN["club"] = """
           <h3>The refounding</h3>
           <p>Itá Ybaté and Flor de Mayo, two clubs from the same neighbourhood, merge with Rubio Ñu
           to keep it alive.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">1963</div>
+        <div>
+          <h3>Unbeaten champions</h3>
+          <p>The club wins the second division without losing a match and comes through the
+          play-off to return to the top flight.</p>
+        </div>
+      </article>
+      <article class="hito">
+        <div class="hito-anio">2009</div>
+        <div>
+          <h3>The return, and the best finish</h3>
+          <p>Rubio Ñu returns to the top flight after twenty-eight years away and records its best
+          ever campaign in the first division.</p>
         </div>
       </article>
       <article class="hito">
@@ -939,6 +1091,32 @@ EN["club"] = """
       <div class="dato"><dt>Surface</dt><dd>Natural grass</dd></div>
       <div class="dato"><dt>Opened</dt><dd>To be confirmed</dd></div>
     </dl>
+  </div>
+</section>
+
+<section class="seccion" id="palmares">
+  <div class="marco dos-columnas">
+    <div>
+      <h2 class="titulo-seccion">Honours</h2>
+      <p class="entrada">Rubio Ñu's history is not a cabinet full of major trophies: it is the
+      story of a club that fell many times and always climbed back.</p>
+      <ul class="lista-marca">
+        <li>División Intermedia champions in 1926, 1941, 1954, 1961, 1963, 1972, 2008 and 2025.</li>
+        <li>Best top-flight campaign: fourth place in the 2009 Clausura.</li>
+        <li>Premio Guaraní, team of the year, 2009.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:1.1rem;color:var(--verde-hondo);margin-bottom:1rem">Club activities</h3>
+      <ul class="lista-marca">
+        <li>Professional football</li>
+        <li>Senior and amateur football</li>
+        <li>Football school</li>
+        <li>Futsal</li>
+        <li>Beach football</li>
+        <li>Padel</li>
+      </ul>
+    </div>
   </div>
 </section>
 
