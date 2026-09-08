@@ -620,15 +620,25 @@ ES["club"] = """
 """
 
 ES["plantel"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
-    <div>
-      <h1>Plantel 2026</h1>
-      <p class="portada-bajada">Los jugadores y el cuerpo técnico de la temporada.</p>
+<section class="portada-foto portada-interior">
+  <div class="fondo" style="background-image:url('{base}assets/img/plantel-2026.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="">
+      <div>
+        <p class="placa-kicker">Temporada 2026</p>
+        <h1>Plantel</h1>
+        <p class="lema">Los jugadores y el cuerpo técnico de la temporada.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>El plantel completo, con el cuerpo técnico</span>
+      <span class="sello">División de Honor</span>
     </div>
   </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="seccion">
   <div class="marco">
@@ -645,15 +655,25 @@ ES["plantel"] = """
 """
 
 ES["fixture"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
-    <div>
-      <h1>Fixture y tabla</h1>
-      <p class="portada-bajada">Resultados, próximos partidos y posiciones de la División de Honor.</p>
+<section class="portada-foto portada-interior">
+  <div class="fondo" style="background-image:url('{base}assets/img/once-arboleda.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="">
+      <div>
+        <p class="placa-kicker">Clausura 2026</p>
+        <h1>Fixture y tabla</h1>
+        <p class="lema">Resultados, próximos partidos y posiciones de la División de Honor.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>Los once, antes de empezar, en <b>La Arboleda</b></span>
+      <span class="sello">Copa de Primera</span>
     </div>
   </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="franja-partido">
   <div class="marco partido-grilla">
@@ -699,15 +719,25 @@ ES["noticias"] = """
 """
 
 ES["socios"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
-    <div>
-      <h1>Hacete socio</h1>
-      <p class="portada-bajada">Sostené al club todo el año y entrá a La Arboleda cada fecha.</p>
+<section class="portada-foto portada-interior">
+  <div class="fondo" style="background-image:url('{base}assets/img/equipo-visitante.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="">
+      <div>
+        <p class="placa-kicker">Sé parte del club</p>
+        <h1>Hacete socio</h1>
+        <p class="lema">Sostené al club todo el año y entrá a La Arboleda cada fecha.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>El albiverde, de visitante</span>
+      <span class="sello">Desde 1913</span>
     </div>
   </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="seccion">
   <div class="marco">
@@ -1179,15 +1209,25 @@ EN["club"] = """
 """
 
 EN["plantel"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
-    <div>
-      <h1>2026 squad</h1>
-      <p class="portada-bajada">The players and coaching staff for the season.</p>
+<section class="portada-foto portada-interior">
+  <div class="fondo" style="background-image:url('{base}assets/img/plantel-2026.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="">
+      <div>
+        <p class="placa-kicker">2026 season</p>
+        <h1>Squad</h1>
+        <p class="lema">The players and coaching staff for the season.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>The full squad, with the coaching staff</span>
+      <span class="sello">First Division</span>
     </div>
   </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="seccion">
   <div class="marco">
@@ -1204,15 +1244,25 @@ EN["plantel"] = """
 """
 
 EN["fixture"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
-    <div>
-      <h1>Fixtures and table</h1>
-      <p class="portada-bajada">Results, upcoming matches and First Division standings.</p>
+<section class="portada-foto portada-interior">
+  <div class="fondo" style="background-image:url('{base}assets/img/once-arboleda.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="">
+      <div>
+        <p class="placa-kicker">Clausura 2026</p>
+        <h1>Fixtures</h1>
+        <p class="lema">Results, upcoming matches and First Division standings.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>The starting eleven at <b>La Arboleda</b></span>
+      <span class="sello">Copa de Primera</span>
     </div>
   </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="franja-partido">
   <div class="marco partido-grilla">
@@ -1258,15 +1308,25 @@ EN["noticias"] = """
 """
 
 EN["socios"] = """
-<section class="portada">
-  <div class="marco portada-contenido">
-    <img class="portada-escudo" src="{base}assets/img/escudo.png" alt="">
-    <div>
-      <h1>Become a member</h1>
-      <p class="portada-bajada">Support the club all year and get into La Arboleda every matchday.</p>
+<section class="portada-foto portada-interior">
+  <div class="fondo" style="background-image:url('{base}assets/img/equipo-visitante.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <div class="placa">
+      <img src="{base}assets/img/escudo.png" alt="">
+      <div>
+        <p class="placa-kicker">Be part of the club</p>
+        <h1>Membership</h1>
+        <p class="lema">Support the club all year and get into La Arboleda every matchday.</p>
+      </div>
+    </div>
+    <div class="pie-foto">
+      <span>The albiverde, away from home</span>
+      <span class="sello">Since 1913</span>
     </div>
   </div>
 </section>
+<div class="filete bastones"></div>
 
 <section class="seccion">
   <div class="marco">
