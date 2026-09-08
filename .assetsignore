@@ -1,0 +1,6 @@
+# Archivos del repo que no deben publicarse en el sitio
+build.py
+README.md
+wrangler.jsonc
+.assetsignore
+worker/

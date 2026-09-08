@@ -1,0 +1,10 @@
+{
+  // Configuración de despliegue del sitio de Club Rubio Ñu en Cloudflare.
+  // El sitio es estático: no hay build, se sirven los archivos tal cual.
+  "name": "rubio-nu",
+  "compatibility_date": "2026-09-08",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  }
+}
