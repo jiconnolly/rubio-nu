@@ -368,6 +368,16 @@ ES["index"] = """
   </div>
 </section>
 
+<section class="banda-foto">
+  <div class="fondo" style="background-image:url('{base}assets/img/tribuna-arboleda.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <p class="banda-cita">Cada quince días, esta tribuna se llena
+      <span>La Arboleda, Santísima Trinidad.</span>
+    </p>
+  </div>
+</section>
+
 <section class="seccion">
   <div class="marco">
     <div class="accion">
@@ -581,6 +591,20 @@ ES["club"] = """
       <div class="dato"><dt>Superficie</dt><dd>Césped natural</dd></div>
       <div class="dato"><dt>Inauguración</dt><dd>Por confirmar</dd></div>
     </dl>
+    <div class="tira-fotos">
+      <figure>
+        <img src="{base}assets/img/estadio-visera.webp" alt="Visera Rubén Martín Ruiz Díaz, en el estadio La Arboleda" loading="lazy" width="900" height="600">
+        <figcaption>La visera Rubén Martín Ruiz Díaz.</figcaption>
+      </figure>
+      <figure>
+        <img src="{base}assets/img/estadio-corner.webp" alt="Banderín de córner y césped del estadio La Arboleda" loading="lazy" width="900" height="600">
+        <figcaption>El córner, antes de que llegue la gente.</figcaption>
+      </figure>
+      <figure>
+        <img src="{base}assets/img/estadio-linea.webp" alt="Línea de cal hacia la tribuna albiverde de La Arboleda" loading="lazy" width="900" height="600">
+        <figcaption>La tribuna, pintada de blanco y verde.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -650,6 +674,21 @@ ES["plantel"] = """
   <div class="marco">
     <h2 class="titulo-seccion">Cuerpo técnico</h2>
     <div data-cuerpo-tecnico><p class="cargando">Cargando…</p></div>
+  </div>
+</section>
+
+<section class="seccion seccion-tinta textura-diagonal">
+  <div class="marco">
+    <h2 class="titulo-seccion">El equipo en cancha</h2>
+    <p class="entrada">Imágenes de la temporada en la División de Honor.</p>
+    <div class="galeria-accion">
+      <img src="{base}assets/img/accion-remate.webp" alt="Jugador de Rubio Ñu por rematar al arco" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-festejo.webp" alt="Jugadores de Rubio Ñu abrazados festejando un gol" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-grito.webp" alt="Jugador de Rubio Ñu celebrando y señalando hacia la tribuna" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-cabezazo.webp" alt="Disputa aérea dentro del área en La Arboleda" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-duelo.webp" alt="Duelo por la pelota, en blanco y negro" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-conduccion.webp" alt="Jugador de Rubio Ñu conduciendo la pelota" loading="lazy" width="760" height="950">
+    </div>
   </div>
 </section>
 """
@@ -957,6 +996,16 @@ EN["index"] = """
   </div>
 </section>
 
+<section class="banda-foto">
+  <div class="fondo" style="background-image:url('{base}assets/img/tribuna-arboleda.webp')"></div>
+  <div class="velo"></div>
+  <div class="marco">
+    <p class="banda-cita">Every other week, this stand fills up
+      <span>La Arboleda, Santísima Trinidad.</span>
+    </p>
+  </div>
+</section>
+
 <section class="seccion">
   <div class="marco">
     <div class="accion">
@@ -1170,6 +1219,20 @@ EN["club"] = """
       <div class="dato"><dt>Surface</dt><dd>Natural grass</dd></div>
       <div class="dato"><dt>Opened</dt><dd>To be confirmed</dd></div>
     </dl>
+    <div class="tira-fotos">
+      <figure>
+        <img src="{base}assets/img/estadio-visera.webp" alt="The Rubén Martín Ruiz Díaz stand roof at La Arboleda" loading="lazy" width="900" height="600">
+        <figcaption>The Rubén Martín Ruiz Díaz stand roof.</figcaption>
+      </figure>
+      <figure>
+        <img src="{base}assets/img/estadio-corner.webp" alt="Corner flag and pitch at La Arboleda" loading="lazy" width="900" height="600">
+        <figcaption>The corner, before the crowd arrives.</figcaption>
+      </figure>
+      <figure>
+        <img src="{base}assets/img/estadio-linea.webp" alt="Touchline leading to the green and white stand at La Arboleda" loading="lazy" width="900" height="600">
+        <figcaption>The stand, painted white and green.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -1239,6 +1302,21 @@ EN["plantel"] = """
   <div class="marco">
     <h2 class="titulo-seccion">Coaching staff</h2>
     <div data-cuerpo-tecnico><p class="cargando">Loading…</p></div>
+  </div>
+</section>
+
+<section class="seccion seccion-tinta textura-diagonal">
+  <div class="marco">
+    <h2 class="titulo-seccion">The team on the pitch</h2>
+    <p class="entrada">Images from the season in the First Division.</p>
+    <div class="galeria-accion">
+      <img src="{base}assets/img/accion-remate.webp" alt="Rubio Ñu player about to shoot" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-festejo.webp" alt="Rubio Ñu players celebrating a goal together" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-grito.webp" alt="Rubio Ñu player celebrating and pointing to the stand" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-cabezazo.webp" alt="Aerial duel inside the box at La Arboleda" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-duelo.webp" alt="Battle for the ball, in black and white" loading="lazy" width="760" height="950">
+      <img src="{base}assets/img/accion-conduccion.webp" alt="Rubio Ñu player running with the ball" loading="lazy" width="760" height="950">
+    </div>
   </div>
 </section>
 """

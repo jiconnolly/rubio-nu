@@ -611,6 +611,29 @@ table.posiciones td.pts { font-weight: 700; }
 .redes-claro a { border-color: rgba(16, 32, 26, 0.22); color: var(--tinta); }
 .redes-claro a:hover { background: var(--verde); border-color: var(--verde); color: var(--tinta); }
 
+/* ===== Tiras y galerías de fotos ===== */
+.tira-fotos {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2px; margin-top: clamp(1.5rem, 4vw, 2.25rem);
+}
+.tira-fotos figure { margin: 0; }
+.tira-fotos img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/2; display: block; }
+.tira-fotos figcaption {
+  font-size: 0.78rem; color: var(--tinta-suave); margin-top: 0.55rem;
+}
+.seccion-tinta .tira-fotos figcaption { color: rgba(255,255,255,0.55); }
+
+.galeria-accion {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; border-top: 3px solid var(--verde); padding-top: 2px;
+}
+@media (max-width: 760px) { .galeria-accion { grid-template-columns: repeat(2, 1fr); } }
+.galeria-accion img {
+  width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; display: block;
+  transition: filter 0.2s;
+}
+.galeria-accion a:hover img, .galeria-accion figure:hover img { filter: brightness(1.06); }
+
 /* ===== Pie ===== */
 .pie {
   background: var(--tinta); color: rgba(255, 255, 255, 0.62);
