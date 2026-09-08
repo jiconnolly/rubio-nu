@@ -579,6 +579,20 @@ table.posiciones td.pts { font-weight: 700; }
 }
 .figura-estadio figcaption b { color: var(--tinta); font-weight: 700; }
 
+/* ===== Redes ===== */
+.redes { display: flex; gap: 0.6rem; margin-top: 1rem; }
+.redes a {
+  width: 38px; height: 38px; display: grid; place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 3px;
+  color: rgba(255, 255, 255, 0.75);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.redes a:hover { background: var(--verde); color: var(--tinta); border-color: var(--verde); }
+.redes svg { width: 19px; height: 19px; fill: currentColor; display: block; }
+
+.redes-claro a { border-color: rgba(16, 32, 26, 0.22); color: var(--tinta); }
+.redes-claro a:hover { background: var(--verde); border-color: var(--verde); color: var(--tinta); }
+
 /* ===== Pie ===== */
 .pie {
   background: var(--tinta); color: rgba(255, 255, 255, 0.62);
