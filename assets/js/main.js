@@ -246,7 +246,7 @@ async function plantel() {
     const staff = (d.cuerpoTecnico || []).filter(m => m.nombre);
     cuerpo.innerHTML = staff.length
       ? `<dl class="datos-grilla">${staff.map(m =>
-          `<div class="dato"><dt>${m.rol}</dt><dd>${m.nombre}</dd></div>`).join('')}</dl>`
+          `<div class="dato"><dt>${texto(m.rol)}</dt><dd>${m.nombre}</dd></div>`).join('')}</dl>`
       : `<p class="vacio">${T.sinCuerpo}</p>`;
   }
 }

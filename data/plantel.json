@@ -3,21 +3,40 @@
   "actualizado": "2026-09-08",
   "cuerpoTecnico": [
     {
-      "rol": "Director técnico",
-      "nombre": "Javier Torrente",
+      "rol": {
+        "es": "Director técnico",
+        "en": "Head coach"
+      },
+      "nombre": "Javier Luis Torrente",
       "desde": "2026-08"
     },
     {
-      "rol": "Ayudante de campo",
-      "nombre": ""
+      "rol": {
+        "es": "Ayudante de campo",
+        "en": "Assistant coach"
+      },
+      "nombre": "Diego Torrente"
     },
     {
-      "rol": "Preparador físico",
-      "nombre": ""
+      "rol": {
+        "es": "Preparador físico",
+        "en": "Fitness coach"
+      },
+      "nombre": "Gonzalo Sánchez"
     },
     {
-      "rol": "Entrenador de arqueros",
-      "nombre": ""
+      "rol": {
+        "es": "Entrenador de arqueros",
+        "en": "Goalkeeping coach"
+      },
+      "nombre": "Emilio González"
+    },
+    {
+      "rol": {
+        "es": "Mánager",
+        "en": "Manager"
+      },
+      "nombre": "Roberto Acuña"
     }
   ],
   "jugadores": []
