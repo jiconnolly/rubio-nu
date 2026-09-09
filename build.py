@@ -655,8 +655,17 @@ ES["club"] = """
 <section class="seccion seccion-gris" id="comision">
   <div class="marco">
     <h2 class="titulo-seccion">Comisión directiva</h2>
-    <p class="entrada">La nómina completa de la comisión directiva se publica en esta página.</p>
-    <div class="vacio">Pendiente de carga.</div>
+    <p class="entrada">Los dirigentes que conducen la institución.</p>
+    <figure class="figura-estadio">
+      <img src="{base}assets/img/comision-directiva.webp"
+           alt="La comisión directiva del Club Rubio Ñu, reunida en el estadio La Arboleda"
+           loading="lazy" width="1600" height="1004">
+      <figcaption>
+        <span>La comisión directiva, en La Arboleda.</span>
+        <span>Bajo la <b>visera Rubén Martín Ruiz Díaz</b></span>
+      </figcaption>
+    </figure>
+    <p class="entrada" style="margin-top:1.5rem">La nómina con nombres y cargos se publica acá.</p>
   </div>
 </section>
 """
@@ -1301,8 +1310,17 @@ EN["club"] = """
 <section class="seccion seccion-gris" id="comision">
   <div class="marco">
     <h2 class="titulo-seccion">Board of directors</h2>
-    <p class="entrada">The full board is published on this page.</p>
-    <div class="vacio">To be added.</div>
+    <p class="entrada">The officials who run the club.</p>
+    <figure class="figura-estadio">
+      <img src="{base}assets/img/comision-directiva.webp"
+           alt="The board of directors of Club Rubio Ñu, gathered at La Arboleda"
+           loading="lazy" width="1600" height="1004">
+      <figcaption>
+        <span>The board of directors, at La Arboleda.</span>
+        <span>Under the <b>Rubén Martín Ruiz Díaz stand</b></span>
+      </figcaption>
+    </figure>
+    <p class="entrada" style="margin-top:1.5rem">The full list of names and roles goes here.</p>
   </div>
 </section>
 """
