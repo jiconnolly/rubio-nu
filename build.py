@@ -51,7 +51,7 @@ CHROME = {
         "instituciones": "Rubio Ñu está afiliado a la Asociación Paraguaya de Fútbol, miembro de la CONMEBOL.",
         "pie_direccion": "Barrio Santísima Trinidad, Asunción, Paraguay.<br>Fundado el 24 de agosto de 1913.",
         "pie_columnas": [
-            ("EL CLUB", [("club", "Historia"), ("club#nombre", "El nombre"), ("club#estadio", "La Arboleda"), ("plantel", "Plantel")]),
+            ("EL CLUB", [("club", "Historia"), ("club#nombre", "El nombre"), ("club#estadio", "La Arboleda"), ("club#inferiores", "Inferiores"), ("plantel", "Plantel")]),
             ("COMPETENCIA", [("fixture", "Fixture"), ("fixture#tabla", "Tabla de posiciones"), ("noticias", "Noticias")]),
             ("PARTICIPAR", [("socios", "Hacete socio"), ("contacto", "Contacto"), ("contacto#prensa", "Prensa")]),
         ],
@@ -67,7 +67,7 @@ CHROME = {
         "instituciones": "Rubio Ñu is affiliated to the Paraguayan Football Association, a member of CONMEBOL.",
         "pie_direccion": "Santísima Trinidad, Asunción, Paraguay.<br>Founded on 24 August 1913.",
         "pie_columnas": [
-            ("THE CLUB", [("club", "History"), ("club#nombre", "The name"), ("club#estadio", "La Arboleda"), ("plantel", "Squad")]),
+            ("THE CLUB", [("club", "History"), ("club#nombre", "The name"), ("club#estadio", "La Arboleda"), ("club#inferiores", "Academy"), ("plantel", "Squad")]),
             ("COMPETITION", [("fixture", "Fixtures"), ("fixture#tabla", "League table"), ("noticias", "News")]),
             ("GET INVOLVED", [("socios", "Membership"), ("contacto", "Contact"), ("contacto#prensa", "Press")]),
         ],
@@ -605,6 +605,24 @@ ES["club"] = """
         <figcaption>La tribuna, pintada de blanco y verde.</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section class="seccion seccion-gris" id="inferiores">
+  <div class="marco">
+    <h2 class="titulo-seccion">Las inferiores</h2>
+    <p class="entrada">La Arboleda es donde el club juega los domingos. Las inferiores trabajan en
+    otro lado: en el CARDIF, el complejo de la Asociación Paraguaya de Fútbol, donde se forman bajo
+    la metodología de la APF.</p>
+    <figure class="figura-estadio">
+      <img src="{base}assets/img/cardif.webp"
+           alt="Vista aérea del CARDIF, el complejo de entrenamiento de la Asociación Paraguaya de Fútbol"
+           loading="lazy" width="1600" height="1067">
+      <figcaption>
+        <span>El CARDIF, donde entrenan las inferiores del club.</span>
+        <span><b>Asociación Paraguaya de Fútbol</b></span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -1233,6 +1251,24 @@ EN["club"] = """
         <figcaption>The stand, painted white and green.</figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section class="seccion seccion-gris" id="inferiores">
+  <div class="marco">
+    <h2 class="titulo-seccion">The academy</h2>
+    <p class="entrada">La Arboleda is where the club plays on Sundays. The youth teams work
+    somewhere else: at the CARDIF, the Paraguayan Football Association's training complex, where
+    they develop under the APF methodology.</p>
+    <figure class="figura-estadio">
+      <img src="{base}assets/img/cardif.webp"
+           alt="Aerial view of the CARDIF, the Paraguayan Football Association training complex"
+           loading="lazy" width="1600" height="1067">
+      <figcaption>
+        <span>The CARDIF, where the club's youth teams train.</span>
+        <span><b>Paraguayan Football Association</b></span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
