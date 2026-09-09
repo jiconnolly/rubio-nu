@@ -32,16 +32,31 @@ sueltos, porque el script los sobreescribe.
 - **Último resultado y próximos partidos**: `data/partidos.json`
 - **Plantel**: `data/plantel.json` — los jugadores sin `nombre` no se muestran
 
-## Pasar a datos en vivo
+## Actualización semanal de la tabla
 
-Hoy la tabla y los partidos se leen de los JSON estáticos. Para automatizarlos:
+La tabla se carga a mano. Cada semana, después de la fecha:
 
-1. Crear cuenta gratuita en `dashboard.api-football.com`
-2. Publicar `worker/api.js` en Cloudflare con la key como secret
-3. En `assets/js/main.js`, poner `ORIGEN_VIVO = '/api'`
+1. Abrir `data/tabla.json`
+2. Actualizar los doce equipos con los datos de la APF
+3. Cambiar `fecha_jugada` y `actualizado` (formato AAAA-MM-DD)
 
-No usar los widgets de copiar y pegar de API-Football: obligan a dejar la key
-visible en el HTML.
+La fecha de actualización se muestra debajo de la tabla en el sitio, así que
+si queda vieja se nota. `forma` son los últimos cinco partidos, del más viejo
+al más nuevo, con G de ganó, E de empató y P de perdió. La marca
+`"esNosotros": true` es la que pinta de verde la fila de Rubio Ñu.
+
+Para el último resultado y los próximos partidos, `data/partidos.json`. Si
+`ultimo` es `null` y `proximos` está vacío, la franja de partidos se oculta
+sola: es preferible no mostrarla a mostrar datos sin confirmar.
+
+## Datos en vivo (pendiente)
+
+`worker/index.js` trae la tabla y los partidos desde API-Football, pero NO está
+en uso: el plan gratuito no da acceso a la temporada 2026 y devuelve
+`"Free plans do not have access to this season, try from 2022 to 2024."`.
+Requiere plan pago. Para activarlo: agregar `"main": "worker/index.js"` y el
+binding `ASSETS` en `wrangler.jsonc`, cargar el secret `API_FOOTBALL_KEY` y
+poner `ORIGEN_VIVO = '/api'` en `assets/js/main.js`.
 
 ## Antes de publicar
 

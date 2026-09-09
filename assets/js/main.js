@@ -37,6 +37,7 @@ const T = {
     posicionesDe: 'Posiciones del',
     fecha: 'fecha',
     rotuloFecha: 'Fecha',
+    actualizado: 'Actualizado el',
     datosDe: 'Datos de la',
     gano: 'Ganó', empato: 'Empató', perdio: 'Perdió',
     puestos: { Arqueros: 'Arqueros', Defensores: 'Defensores', Mediocampistas: 'Mediocampistas', Delanteros: 'Delanteros' },
@@ -60,6 +61,7 @@ const T = {
     posicionesDe: 'Standings for the',
     fecha: 'matchday',
     rotuloFecha: 'Matchday',
+    actualizado: 'Updated',
     datosDe: 'Data from the',
     gano: 'Won', empato: 'Drew', perdio: 'Lost',
     puestos: { Arqueros: 'Goalkeepers', Defensores: 'Defenders', Mediocampistas: 'Midfielders', Delanteros: 'Forwards' },
@@ -152,6 +154,7 @@ async function tabla() {
       <div class="leyenda-tabla">
         <span>${texto(d.torneo)}, ${T.fecha} ${d.fecha_jugada}</span>
         <span>${T.datosDe} ${texto(d.fuente)}</span>
+        ${d.actualizado ? `<span>${T.actualizado} ${diaMes(leerFecha(d.actualizado))}</span>` : ''}
       </div>`;
   } catch (err) {
     destino.innerHTML = `<p class="vacio">${T.sinTabla}</p>`;
