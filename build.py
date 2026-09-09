@@ -612,14 +612,14 @@ ES["club"] = """
   <div class="marco">
     <h2 class="titulo-seccion">Las inferiores</h2>
     <p class="entrada">La Arboleda es donde el club juega los domingos. Las inferiores trabajan en
-    otro lado: en el CARDIF, el complejo de la Asociación Paraguaya de Fútbol, donde se forman bajo
-    la metodología de la APF.</p>
+    otro lado: en el CARDIF, el Centro de Alto Rendimiento de las Divisiones Formativas de la Asociación
+    Paraguaya de Fútbol, donde se forman bajo la metodología de la APF.</p>
     <figure class="figura-estadio">
       <img src="{base}assets/img/cardif.webp"
-           alt="Vista aérea del CARDIF, el complejo de entrenamiento de la Asociación Paraguaya de Fútbol"
+           alt="Vista aérea del CARDIF, Centro de Alto Rendimiento de las Divisiones Formativas de la APF"
            loading="lazy" width="1600" height="1067">
       <figcaption>
-        <span>El CARDIF, donde entrenan las inferiores del club.</span>
+        <span>El CARDIF, Centro de Alto Rendimiento de las Divisiones Formativas.</span>
         <span><b>Asociación Paraguaya de Fútbol</b></span>
       </figcaption>
     </figure>
@@ -1258,14 +1258,14 @@ EN["club"] = """
   <div class="marco">
     <h2 class="titulo-seccion">The academy</h2>
     <p class="entrada">La Arboleda is where the club plays on Sundays. The youth teams work
-    somewhere else: at the CARDIF, the Paraguayan Football Association's training complex, where
-    they develop under the APF methodology.</p>
+    somewhere else: at the CARDIF, the Paraguayan Football Association's high-performance centre for
+    youth development, where they train under the APF methodology.</p>
     <figure class="figura-estadio">
       <img src="{base}assets/img/cardif.webp"
            alt="Aerial view of the CARDIF, the Paraguayan Football Association training complex"
            loading="lazy" width="1600" height="1067">
       <figcaption>
-        <span>The CARDIF, where the club's youth teams train.</span>
+        <span>The CARDIF, the APF high-performance centre for youth football.</span>
         <span><b>Paraguayan Football Association</b></span>
       </figcaption>
     </figure>
