@@ -167,6 +167,14 @@ async function partidos() {
   try {
     const d = await traer(RUTAS.partidos);
 
+    /* Sin datos cargados, la franja entera se oculta: es preferible no
+       mostrarla a mostrarla vacía o con información sin confirmar. */
+    if (!d.ultimo && !(d.proximos || []).length) {
+      const franja = document.querySelector('.franja-partido');
+      if (franja) franja.style.display = 'none';
+      return;
+    }
+
     if (cajaUltimo && d.ultimo) {
       const u = d.ultimo;
       cajaUltimo.innerHTML = `

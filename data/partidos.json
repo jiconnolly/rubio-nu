@@ -1,49 +1,5 @@
 {
-  "actualizado": "2026-09-03",
-  "ultimo": {
-    "fecha": "2026-08-30",
-    "local": "Rubio Ñu",
-    "visitante": "Sportivo Ameliano",
-    "golesLocal": 2,
-    "golesVisitante": 1,
-    "estadio": "La Arboleda",
-    "verificar": true,
-    "torneo": "Clausura",
-    "ronda": 8
-  },
-  "proximos": [
-    {
-      "fecha": "2026-09-06",
-      "hora": "18:00",
-      "local": "Rubio Ñu",
-      "visitante": "Sportivo Luqueño",
-      "estadio": "La Arboleda",
-      "condicion": "local",
-      "verificar": true,
-      "torneo": "Clausura",
-      "ronda": 9
-    },
-    {
-      "fecha": "2026-09-13",
-      "hora": "16:00",
-      "local": "Olimpia",
-      "visitante": "Rubio Ñu",
-      "estadio": "Manuel Ferreira",
-      "condicion": "visitante",
-      "verificar": true,
-      "torneo": "Clausura",
-      "ronda": 10
-    },
-    {
-      "fecha": "2026-09-20",
-      "hora": "18:00",
-      "local": "Rubio Ñu",
-      "visitante": "Deportivo Recoleta",
-      "estadio": "La Arboleda",
-      "condicion": "local",
-      "verificar": true,
-      "torneo": "Clausura",
-      "ronda": 11
-    }
-  ]
+  "actualizado": "2026-09-09",
+  "ultimo": null,
+  "proximos": []
 }
