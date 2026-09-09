@@ -11,43 +11,53 @@
 
 const BASE = 'https://v3.football.api-sports.io';
 const TEMPORADA = 2026;
-const CACHE_SEGUNDOS = 300;
+const CACHE_SEGUNDOS = 300;      // tabla y partidos
+const CACHE_ESTRUCTURA = 86400;  // liga y equipo: no cambian en toda la temporada
 
-/* Se resuelve solo la primera vez y queda en caché. */
-let ligaId = null;
-let equipoId = null;
+/* El plan gratuito limita las consultas por minuto, así que cada respuesta
+   de la API se guarda en la caché del borde y solo se vuelve a pedir cuando
+   vence. Sin esto, dos recargas seguidas agotan el cupo. */
+async function api(ruta, env, ttl = CACHE_SEGUNDOS) {
+  const clave = new Request('https://cache.rubionu.local' + ruta, { method: 'GET' });
+  const cache = caches.default;
 
-async function api(ruta, env) {
-  const r = await fetch(BASE + ruta, {
-    headers: { 'x-apisports-key': env.API_FOOTBALL_KEY },
-    cf: { cacheTtl: CACHE_SEGUNDOS, cacheEverything: true }
-  });
-  if (!r.ok) throw new Error(`API-Football ${r.status} en ${ruta}`);
-  const j = await r.json();
-  if (j.errors && Object.keys(j.errors).length) {
-    throw new Error('API-Football: ' + JSON.stringify(j.errors));
+  let respuesta = await cache.match(clave);
+  if (!respuesta) {
+    const r = await fetch(BASE + ruta, {
+      headers: { 'x-apisports-key': env.API_FOOTBALL_KEY }
+    });
+    const cuerpo = await r.text();
+    if (!r.ok) throw new Error(`API-Football ${r.status} en ${ruta}`);
+
+    const j = JSON.parse(cuerpo);
+    if (j.errors && Object.keys(j.errors).length) {
+      throw new Error('API-Football: ' + JSON.stringify(j.errors));
+    }
+    respuesta = new Response(cuerpo, {
+      headers: {
+        'content-type': 'application/json',
+        'cache-control': 'public, max-age=' + ttl
+      }
+    });
+    await cache.put(clave, respuesta.clone());
   }
-  return j.response;
+  return (await respuesta.json()).response;
 }
 
 /* Busca la primera división paraguaya sin depender de un ID fijo. */
 async function resolverLiga(env) {
-  if (ligaId) return ligaId;
-  const ligas = await api(`/leagues?country=Paraguay&season=${TEMPORADA}&type=League`, env);
+  const ligas = await api(`/leagues?country=Paraguay&season=${TEMPORADA}&type=League`, env, CACHE_ESTRUCTURA);
   const primera = ligas.find(l => /division profesional|primera/i.test(l.league.name)) || ligas[0];
   if (!primera) throw new Error('No se encontró la liga paraguaya');
-  ligaId = primera.league.id;
-  return ligaId;
+  return primera.league.id;
 }
 
 async function resolverEquipo(env) {
-  if (equipoId) return equipoId;
   const liga = await resolverLiga(env);
-  const equipos = await api(`/teams?league=${liga}&season=${TEMPORADA}`, env);
+  const equipos = await api(`/teams?league=${liga}&season=${TEMPORADA}`, env, CACHE_ESTRUCTURA);
   const nuestro = equipos.find(e => /rubio/i.test(e.team.name));
   if (!nuestro) throw new Error('No se encontró a Rubio Ñu en la liga');
-  equipoId = nuestro.team.id;
-  return equipoId;
+  return nuestro.team.id;
 }
 
 function nombreTorneo(nombreLiga, ronda) {
@@ -119,15 +129,7 @@ async function partidos(env) {
 async function diagnostico(env) {
   const liga = await resolverLiga(env);
   const equipo = await resolverEquipo(env);
-  const cuenta = await api('/status', env);
-  return {
-    ok: true,
-    liga_id: liga,
-    equipo_id: equipo,
-    temporada: TEMPORADA,
-    consultas_hoy: cuenta?.requests?.current,
-    limite_diario: cuenta?.requests?.limit_day
-  };
+  return { ok: true, liga_id: liga, equipo_id: equipo, temporada: TEMPORADA };
 }
 
 export default {
