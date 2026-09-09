@@ -172,6 +172,32 @@ async function revisarKey(env) {
   return { forma, pruebas };
 }
 
+/* Prueba varias rutas para ver cuál rechaza el plan gratuito. */
+async function probarRutas(env) {
+  const k = (env.API_FOOTBALL_KEY || '').trim();
+  const rutas = [
+    '/status',
+    '/leagues?country=Paraguay',
+    `/leagues?country=Paraguay&season=${TEMPORADA}`,
+    '/leagues?id=250',
+    `/standings?league=250&season=${TEMPORADA}`,
+    '/standings?league=250&season=2023'
+  ];
+  const salida = {};
+  for (const ruta of rutas) {
+    try {
+      const r = await fetch(BASE + ruta, { headers: { 'x-apisports-key': k } });
+      const j = await r.json();
+      salida[ruta] = {
+        http: r.status,
+        errores: j.errors && Object.keys(j.errors).length ? j.errors : null,
+        resultados: j.results
+      };
+    } catch (e) { salida[ruta] = { fallo: String(e.message || e) }; }
+  }
+  return salida;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -194,6 +220,7 @@ export default {
         if (url.pathname === '/api/partidos')    return json(await partidos(env));
         if (url.pathname === '/api/diagnostico') return json(await diagnostico(env));
         if (url.pathname === '/api/revisar-key')  return json(await revisarKey(env));
+        if (url.pathname === '/api/probar')        return json(await probarRutas(env));
         return json({ error: 'Ruta no encontrada' }, 404);
       } catch (err) {
         /* Ante cualquier fallo devolvemos 502: el sitio cae solo a los
