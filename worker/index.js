@@ -132,72 +132,6 @@ async function diagnostico(env) {
   return { ok: true, liga_id: liga, equipo_id: equipo, temporada: TEMPORADA };
 }
 
-/* Revisa la key sin revelarla: solo forma y respuesta cruda del servidor.
-   Sirve para distinguir una key inválida de una key de RapidAPI. */
-async function revisarKey(env) {
-  const k = env.API_FOOTBALL_KEY || '';
-  const forma = {
-    largo: k.length,
-    tiene_espacios: /\s/.test(k),
-    solo_hexadecimal: /^[0-9a-f]+$/i.test(k),
-    empieza_con: k.slice(0, 3),
-    termina_con: k.slice(-3)
-  };
-
-  const pruebas = {};
-
-  // 1. API directa (dashboard.api-football.com)
-  try {
-    const r = await fetch(BASE + '/status', { headers: { 'x-apisports-key': k.trim() } });
-    const j = await r.json();
-    pruebas.directa = {
-      http: r.status,
-      errores: j.errors,
-      cuenta: j.response?.account?.email ? 'presente' : null,
-      plan: j.response?.subscription?.plan,
-      usadas_hoy: j.response?.requests?.current,
-      limite_dia: j.response?.requests?.limit_day
-    };
-  } catch (e) { pruebas.directa = { fallo: String(e.message || e) }; }
-
-  // 2. Misma key vía RapidAPI, por si la cuenta se creó por ahí
-  try {
-    const r = await fetch('https://api-football-v1.p.rapidapi.com/v3/status', {
-      headers: { 'x-rapidapi-key': k.trim(), 'x-rapidapi-host': 'api-football-v1.p.rapidapi.com' }
-    });
-    const j = await r.json();
-    pruebas.rapidapi = { http: r.status, errores: j.errors, plan: j.response?.subscription?.plan };
-  } catch (e) { pruebas.rapidapi = { fallo: String(e.message || e) }; }
-
-  return { forma, pruebas };
-}
-
-/* Prueba varias rutas para ver cuál rechaza el plan gratuito. */
-async function probarRutas(env) {
-  const k = (env.API_FOOTBALL_KEY || '').trim();
-  const rutas = [
-    '/status',
-    '/leagues?country=Paraguay',
-    `/leagues?country=Paraguay&season=${TEMPORADA}`,
-    '/leagues?id=250',
-    `/standings?league=250&season=${TEMPORADA}`,
-    '/standings?league=250&season=2023'
-  ];
-  const salida = {};
-  for (const ruta of rutas) {
-    try {
-      const r = await fetch(BASE + ruta, { headers: { 'x-apisports-key': k } });
-      const j = await r.json();
-      salida[ruta] = {
-        http: r.status,
-        errores: j.errors && Object.keys(j.errors).length ? j.errors : null,
-        resultados: j.results
-      };
-    } catch (e) { salida[ruta] = { fallo: String(e.message || e) }; }
-  }
-  return salida;
-}
-
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -219,8 +153,6 @@ export default {
         if (url.pathname === '/api/tabla')       return json(await tabla(env));
         if (url.pathname === '/api/partidos')    return json(await partidos(env));
         if (url.pathname === '/api/diagnostico') return json(await diagnostico(env));
-        if (url.pathname === '/api/revisar-key')  return json(await revisarKey(env));
-        if (url.pathname === '/api/probar')        return json(await probarRutas(env));
         return json({ error: 'Ruta no encontrada' }, 404);
       } catch (err) {
         /* Ante cualquier fallo devolvemos 502: el sitio cae solo a los
