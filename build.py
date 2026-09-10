@@ -575,7 +575,8 @@ ES["club"] = """
   <div class="marco">
     <h2 class="titulo-seccion">La Arboleda</h2>
     <p class="entrada">La cancha del club, en el mismo barrio donde se fundó. Acá juega Rubio Ñu
-    de local todas las fechas del torneo.</p>
+    de local todas las fechas del torneo. La visera lleva el nombre de Rubén Martin Ruiz Díaz
+    Romero, presidente de la institución.</p>
     <figure class="figura-estadio">
       <img src="{base}assets/img/la-arboleda.webp"
            alt="Vista aérea del Estadio La Arboleda rodeado por las casas de Santísima Trinidad"
@@ -594,7 +595,7 @@ ES["club"] = """
     <div class="tira-fotos">
       <figure>
         <img src="{base}assets/img/estadio-visera.webp" alt="Visera Rubén Martín Ruiz Díaz, en el estadio La Arboleda" loading="lazy" width="900" height="600">
-        <figcaption>La visera Rubén Martín Ruiz Díaz.</figcaption>
+        <figcaption>La visera Rubén Martín Ruiz Díaz, por el presidente del club.</figcaption>
       </figure>
       <figure>
         <img src="{base}assets/img/estadio-corner.webp" alt="Banderín de córner y césped del estadio La Arboleda" loading="lazy" width="900" height="600">
@@ -1291,7 +1292,8 @@ EN["club"] = """
   <div class="marco">
     <h2 class="titulo-seccion">La Arboleda</h2>
     <p class="entrada">The club's ground, in the same neighbourhood where it was founded. Rubio Ñu
-    plays every home match here.</p>
+    plays every home match here. The main stand roof carries the name of Rubén Martin Ruiz Díaz
+    Romero, the club's president.</p>
     <figure class="figura-estadio">
       <img src="{base}assets/img/la-arboleda.webp"
            alt="Aerial view of Estadio La Arboleda surrounded by the houses of Santísima Trinidad"
@@ -1310,7 +1312,7 @@ EN["club"] = """
     <div class="tira-fotos">
       <figure>
         <img src="{base}assets/img/estadio-visera.webp" alt="The Rubén Martín Ruiz Díaz stand roof at La Arboleda" loading="lazy" width="900" height="600">
-        <figcaption>The Rubén Martín Ruiz Díaz stand roof.</figcaption>
+        <figcaption>The Rubén Martín Ruiz Díaz stand roof, named after the club president.</figcaption>
       </figure>
       <figure>
         <img src="{base}assets/img/estadio-corner.webp" alt="Corner flag and pitch at La Arboleda" loading="lazy" width="900" height="600">
