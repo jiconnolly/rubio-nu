@@ -1429,7 +1429,7 @@ EN["club"] = """
     </div>
     <div class="nomina-columnas">
       <div>
-        <h3>Electoral tribunal</h3>
+        <h3>TEI · Titulares</h3>
         <ol>
           <li>Víctor Hugo Bejarano Almirón</li>
           <li>Nery Francisco Villalba Solís</li>
@@ -1437,7 +1437,7 @@ EN["club"] = """
         </ol>
       </div>
       <div>
-        <h3>Alternates</h3>
+        <h3>TEI · Suplentes</h3>
         <ol>
           <li>Justo Pastor Apodaca Paredes</li>
           <li>Carlos Alberto Ruiz Díaz Romero</li>
