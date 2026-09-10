@@ -634,6 +634,33 @@ table.posiciones td.pts { font-weight: 700; }
 }
 .galeria-accion a:hover img, .galeria-accion figure:hover img { filter: brightness(1.06); }
 
+/* ===== Nómina de la comisión ===== */
+.nomina { display: grid; gap: 0; margin: 0 0 2rem; border-top: 3px solid var(--verde); }
+.nomina div {
+  display: grid; grid-template-columns: minmax(140px, 22%) 1fr;
+  gap: 1rem; padding: 0.85rem 0.2rem; border-bottom: var(--borde); align-items: baseline;
+}
+.nomina dt {
+  font-family: 'Oswald', sans-serif; text-transform: uppercase;
+  font-size: 0.8rem; letter-spacing: 0.08em; font-weight: 500; color: var(--tinta-suave);
+}
+.nomina dd { margin: 0; font-weight: 500; }
+@media (max-width: 620px) {
+  .nomina div { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+
+.nomina-columnas {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem); margin-top: 2.5rem;
+}
+.nomina-columnas h3 {
+  font-size: 1.05rem; color: var(--verde-hondo);
+  padding-bottom: 0.5rem; border-bottom: 2px solid var(--verde); margin-bottom: 1rem;
+}
+.nomina-columnas ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.55rem; }
+.nomina-columnas li { padding-left: 0.2rem; }
+.nomina-columnas li::marker { color: var(--verde-hondo); font-weight: 700; }
+
 /* ===== Pie ===== */
 .pie {
   background: var(--tinta); color: rgba(255, 255, 255, 0.62);
