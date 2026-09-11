@@ -27,21 +27,7 @@
       }
     },
     {
-      "fecha": "2026-09-24",
-      "hora": null,
-      "torneo": "Clausura",
-      "ronda": null,
-      "local": "Cerro Porteño",
-      "visitante": "Rubio Ñu",
-      "estadio": "",
-      "condicion": "visitante",
-      "nota": {
-        "es": "Fecha sin definir: 19 o 24 de septiembre.",
-        "en": "Date not yet set: 19 or 24 September."
-      }
-    },
-    {
-      "fecha": "2026-09-30",
+      "fecha": "2026-09-19",
       "hora": null,
       "torneo": "Copa Paraguay",
       "ronda": null,
@@ -52,6 +38,20 @@
       "nota": {
         "es": "Octavos de final. Sede a confirmar.",
         "en": "Round of 16. Venue to be confirmed."
+      }
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": null,
+      "local": "Rubio Ñu",
+      "visitante": "Cerro Porteño",
+      "estadio": "",
+      "condicion": null,
+      "nota": {
+        "es": "Condición de local o visitante a confirmar.",
+        "en": "Home or away to be confirmed."
       }
     },
     {

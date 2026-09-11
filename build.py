@@ -634,7 +634,9 @@ ES["club"] = """
       <p class="entrada">La historia de Rubio Ñu no es una vitrina de títulos grandes: es la de un
       club que se cayó muchas veces y siempre volvió a subir.</p>
       <ul class="lista-marca">
-        <li>Campeón de la División Intermedia en 1926, 1941, 1954, 1961, 1963, 1972, 2008 y 2025.</li>
+        <li>Campeón de la División Intermedia en 2008 y 2025.</li>
+        <li>Campeón de la segunda categoría, bajo sus denominaciones anteriores, en 1926, 1941,
+        1954, 1961, 1963 y 1972.</li>
         <li>Mejor campaña en la máxima categoría: cuarto puesto en el Clausura 2009.</li>
         <li>Premio Guaraní al mejor equipo del año, 2009.</li>
       </ul>
@@ -1351,7 +1353,9 @@ EN["club"] = """
       <p class="entrada">Rubio Ñu's history is not a cabinet full of major trophies: it is the
       story of a club that fell many times and always climbed back.</p>
       <ul class="lista-marca">
-        <li>División Intermedia champions in 1926, 1941, 1954, 1961, 1963, 1972, 2008 and 2025.</li>
+        <li>División Intermedia champions in 2008 and 2025.</li>
+        <li>Second-tier champions, under the division's earlier names, in 1926, 1941, 1954, 1961,
+        1963 and 1972.</li>
         <li>Best top-flight campaign: fourth place in the 2009 Clausura.</li>
         <li>Premio Guaraní, team of the year, 2009.</li>
       </ul>

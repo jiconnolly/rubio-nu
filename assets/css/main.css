@@ -402,6 +402,11 @@ table.posiciones td.pts { font-weight: 700; }
 .noticia time { font-size: 0.75rem; color: var(--tinta-suave); letter-spacing: 0.05em; }
 .noticia h3 { font-size: 1.3rem; }
 .noticia p { margin: 0; font-size: 0.9rem; color: var(--tinta-suave); }
+.noticia-medio {
+  margin-top: auto; padding-top: 0.85rem;
+  font-family: 'Oswald', sans-serif; text-transform: uppercase;
+  font-size: 0.72rem; letter-spacing: 0.12em; color: var(--verde-hondo);
+}
 
 /* ===== Bloque de acción ===== */
 .accion {

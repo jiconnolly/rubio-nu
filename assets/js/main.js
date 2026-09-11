@@ -314,12 +314,17 @@ async function noticias() {
       return;
     }
 
-    destino.innerHTML = `<div class="noticias-grilla">${entradas.map(n => `
-      <a class="noticia" href="${n.enlace || '#'}"${n.enlace ? ' target="_blank" rel="noopener"' : ''}>
-        <time datetime="${n.fecha}">${diaMes(leerFecha(n.fecha))}</time>
-        <h3>${n.titulo}</h3>
-        <p>${n.bajada || ''}</p>
-      </a>`).join('')}</div>`;
+    destino.innerHTML = `<div class="noticias-grilla">${entradas.map(n => {
+      const f = leerFecha(n.fecha);
+      const fecha = IDIOMA === 'en' ? `${diaMes(f)}, ${f.getFullYear()}` : `${diaMes(f)} de ${f.getFullYear()}`;
+      const medio = n.medio ? `<span class="noticia-medio">${n.medio}</span>` : '';
+      return `<a class="noticia" href="${n.enlace || '#'}"${n.enlace ? ' target="_blank" rel="noopener"' : ''}>
+        <time datetime="${n.fecha}">${fecha}</time>
+        <h3>${texto(n.titulo)}</h3>
+        <p>${texto(n.bajada)}</p>
+        ${medio}
+      </a>`;
+    }).join('')}</div>`;
   } catch (err) {
     destino.innerHTML = `<p class="vacio">${T.sinNoticias}</p>`;
   }

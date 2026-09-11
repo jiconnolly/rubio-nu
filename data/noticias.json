@@ -1,5 +1,20 @@
 {
   "fuente": "manual",
-  "actualizado": "2026-09-08",
-  "entradas": []
+  "actualizado": "2026-09-10",
+  "entradas": [
+    {
+      "fecha": "2025-09-23",
+      "titulo": {
+        "es": "Campeón de la Intermedia y de vuelta a Primera",
+        "en": "Second division champions, back in the top flight"
+      },
+      "bajada": {
+        "es": "El albiverde selló el título de la División Intermedia 2025 con un empate sin goles ante Guaireña en el Parque del Guairá, y confirmó el ascenso que ya había conseguido la fecha anterior. Dirigía Héctor Mareco.",
+        "en": "The albiverde sealed the 2025 División Intermedia title with a goalless draw against Guaireña at the Parque del Guairá, confirming the promotion already secured a week earlier. Héctor Mareco was in charge."
+      },
+      "enlace": "https://www.abc.com.py/deportes/futbol/intermedia/2025/09/23/rubio-nu-le-pone-el-mono-de-campeon-al-ascenso-a-primera/",
+      "medio": "ABC Color",
+      "archivo": true
+    }
+  ]
 }
