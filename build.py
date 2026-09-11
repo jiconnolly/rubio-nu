@@ -822,8 +822,8 @@ ES["fixture"] = """
 <section class="seccion seccion-gris">
   <div class="marco">
     <h2 class="titulo-seccion">Calendario completo</h2>
-    <p class="entrada">Las fechas del torneo, con horarios y sedes.</p>
-    <div class="vacio">Pendiente de carga.</div>
+    <p class="entrada">Los próximos partidos del albiverde, en el Clausura y en la Copa Paraguay.</p>
+    <div data-calendario><p class="cargando">Cargando calendario…</p></div>
   </div>
 </section>
 """
@@ -1539,8 +1539,8 @@ EN["fixture"] = """
 <section class="seccion seccion-gris">
   <div class="marco">
     <h2 class="titulo-seccion">Full calendar</h2>
-    <p class="entrada">Every matchday of the tournament, with kick-off times and venues.</p>
-    <div class="vacio">To be added.</div>
+    <p class="entrada">Rubio Ñu's upcoming fixtures, in the Clausura and the Copa Paraguay.</p>
+    <div data-calendario><p class="cargando">Loading calendar…</p></div>
   </div>
 </section>
 """

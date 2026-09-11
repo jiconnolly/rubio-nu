@@ -219,6 +219,17 @@ h1, h2, h3, .display {
 .proximo-rival { font-weight: 700; font-size: 0.98rem; }
 .proximo-detalle { font-size: 0.78rem; color: rgba(255, 255, 255, 0.5); }
 .proximo-hora { font-size: 0.86rem; color: rgba(255, 255, 255, 0.72); white-space: nowrap; }
+.proximo-nota {
+  font-size: 0.76rem; color: var(--dorado); margin-top: 0.25rem;
+}
+
+/* El calendario completo va sobre fondo claro, no en la franja oscura */
+.calendario .proximo-fila { border-bottom-color: var(--linea); }
+.calendario .proximo-dia { color: var(--verde-hondo); }
+.calendario .proximo-dia span { color: var(--tinta-suave); }
+.calendario .proximo-detalle { color: var(--tinta-suave); }
+.calendario .proximo-hora { color: var(--tinta-suave); }
+.calendario .proximo-nota { color: #9A6B1F; }
 
 @media (max-width: 760px) {
   .partido-grilla { grid-template-columns: 1fr; }

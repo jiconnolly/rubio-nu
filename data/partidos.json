@@ -1,5 +1,92 @@
 {
-  "actualizado": "2026-09-09",
+  "actualizado": "2026-09-10",
   "ultimo": null,
-  "proximos": []
+  "proximos": [
+    {
+      "fecha": "2026-09-13",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": null,
+      "local": "Rubio Ñu",
+      "visitante": "Nacional",
+      "estadio": "La Arboleda",
+      "condicion": "local"
+    },
+    {
+      "fecha": "2026-09-17",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": null,
+      "local": "Rubio Ñu",
+      "visitante": "Nacional",
+      "estadio": "La Arboleda",
+      "condicion": "local",
+      "nota": {
+        "es": "Segundo cruce con Nacional en cuatro días: a confirmar con la APF.",
+        "en": "Second meeting with Nacional in four days: to be confirmed with the APF."
+      }
+    },
+    {
+      "fecha": "2026-09-24",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": null,
+      "local": "Cerro Porteño",
+      "visitante": "Rubio Ñu",
+      "estadio": "",
+      "condicion": "visitante",
+      "nota": {
+        "es": "Fecha sin definir: 19 o 24 de septiembre.",
+        "en": "Date not yet set: 19 or 24 September."
+      }
+    },
+    {
+      "fecha": "2026-09-30",
+      "hora": null,
+      "torneo": "Copa Paraguay",
+      "ronda": null,
+      "local": "Rubio Ñu",
+      "visitante": "Cerro Porteño",
+      "estadio": "",
+      "condicion": null,
+      "nota": {
+        "es": "Octavos de final. Sede a confirmar.",
+        "en": "Round of 16. Venue to be confirmed."
+      }
+    },
+    {
+      "fecha": "2026-10-01",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": null,
+      "local": "Rubio Ñu",
+      "visitante": "Sportivo 2 de Mayo",
+      "estadio": "La Arboleda",
+      "condicion": "local"
+    },
+    {
+      "fecha": "2026-10-08",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": null,
+      "local": "Sportivo Ameliano",
+      "visitante": "Rubio Ñu",
+      "estadio": "",
+      "condicion": "visitante"
+    },
+    {
+      "fecha": "2026-10-14",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": null,
+      "local": "Rubio Ñu",
+      "visitante": "Olimpia",
+      "estadio": "",
+      "condicion": null,
+      "nota": {
+        "es": "Condición de local o visitante a confirmar.",
+        "en": "Home or away to be confirmed."
+      }
+    }
+  ]
 }

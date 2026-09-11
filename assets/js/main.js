@@ -38,6 +38,9 @@ const T = {
     fecha: 'fecha',
     rotuloFecha: 'Fecha',
     actualizado: 'Actualizado el',
+    sinHora: 'horario a confirmar',
+    sede: 'sede a confirmar',
+    verCalendario: 'Calendario completo',
     datosDe: 'Datos de la',
     gano: 'Ganó', empato: 'Empató', perdio: 'Perdió',
     puestos: { Arqueros: 'Arqueros', Defensores: 'Defensores', Mediocampistas: 'Mediocampistas', Delanteros: 'Delanteros' },
@@ -62,6 +65,9 @@ const T = {
     fecha: 'matchday',
     rotuloFecha: 'Matchday',
     actualizado: 'Updated',
+    sinHora: 'kick-off to be confirmed',
+    sede: 'venue to be confirmed',
+    verCalendario: 'Full calendar',
     datosDe: 'Data from the',
     gano: 'Won', empato: 'Drew', perdio: 'Lost',
     puestos: { Arqueros: 'Goalkeepers', Defensores: 'Defenders', Mediocampistas: 'Midfielders', Delanteros: 'Forwards' },
@@ -78,6 +84,32 @@ function texto(valor) {
   /* Acepta un string suelto o un objeto {es, en} y devuelve el idioma activo. */
   if (valor && typeof valor === 'object') return valor[IDIOMA] || valor.es || '';
   return valor || '';
+}
+
+function filaPartido(p) {
+  const f = leerFecha(p.fecha);
+  const rival = p.condicion === 'local' ? p.visitante : p.local;
+  const otro = p.condicion === 'local' ? p.local : p.visitante;
+  const quien = rival && rival !== 'Rubio Ñu' ? rival : otro;
+
+  /* Sin condición definida no se afirma dónde se juega. */
+  const donde = p.condicion
+    ? `${p.condicion === 'local' ? T.deLocal : T.deVisitante}${p.estadio ? ' ' + T.en + ' ' + p.estadio : ''}`
+    : T.sede;
+
+  const detalle = [donde, competencia(p)].filter(Boolean).join(' · ');
+  const nota = p.nota ? `<div class="proximo-nota">${texto(p.nota)}</div>` : '';
+  const hora = p.hora ? `${T.dias[f.getDay()]} ${p.hora}` : `${T.dias[f.getDay()]} · ${T.sinHora}`;
+
+  return `<div class="proximo-fila">
+      <div class="proximo-dia">${f.getDate()}<span>${T.meses[f.getMonth()]}</span></div>
+      <div>
+        <div class="proximo-rival">${quien}</div>
+        <div class="proximo-detalle">${detalle}</div>
+        ${nota}
+      </div>
+      <div class="proximo-hora">${hora}</div>
+    </div>`;
 }
 
 function competencia(m) {
@@ -190,25 +222,29 @@ async function partidos() {
     }
 
     if (cajaProximos && d.proximos) {
-      const filas = d.proximos.map(p => {
-        const f = leerFecha(p.fecha);
-        const rival = p.condicion === 'local' ? p.visitante : p.local;
-        const condicion = p.condicion === 'local' ? T.deLocal : T.deVisitante;
-        return `<div class="proximo-fila">
-            <div class="proximo-dia">${f.getDate()}<span>${T.meses[f.getMonth()]}</span></div>
-            <div>
-              <div class="proximo-rival">${rival}</div>
-              <div class="proximo-detalle">${condicion} ${T.en} ${p.estadio} · ${competencia(p)}</div>
-            </div>
-            <div class="proximo-hora">${T.dias[f.getDay()]} ${p.hora}</div>
-          </div>`;
-      }).join('');
+      /* En la franja solo entran los tres más cercanos; el resto vive en el calendario. */
+      const filas = d.proximos.slice(0, 3).map(filaPartido).join('');
       cajaProximos.innerHTML = `<p class="partido-rotulo">${T.proximosPartidos}</p>
         <div class="proximo-lista">${filas}</div>`;
     }
   } catch (err) {
     if (cajaUltimo) cajaUltimo.innerHTML = `<p class="partido-pie">${T.sinPartidos}</p>`;
     if (cajaProximos) cajaProximos.innerHTML = '';
+  }
+}
+
+/* ---------- Calendario completo ---------- */
+async function calendario() {
+  const destino = document.querySelector('[data-calendario]');
+  if (!destino) return;
+  try {
+    const d = await traer(RUTAS.partidos);
+    const lista = d.proximos || [];
+    destino.innerHTML = lista.length
+      ? `<div class="proximo-lista calendario">${lista.map(filaPartido).join('')}</div>`
+      : `<p class="vacio">${T.sinPartidos}</p>`;
+  } catch (err) {
+    destino.innerHTML = `<p class="vacio">${T.sinPartidos}</p>`;
   }
 }
 
@@ -293,6 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
   menu();
   tabla();
   partidos();
+  calendario();
   plantel();
   noticias();
 });
