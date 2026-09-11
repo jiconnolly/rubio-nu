@@ -4,27 +4,13 @@
   "proximos": [
     {
       "fecha": "2026-09-13",
-      "hora": null,
+      "hora": "18:30",
       "torneo": "Clausura",
-      "ronda": null,
+      "ronda": 10,
       "local": "Rubio Ñu",
       "visitante": "Nacional",
       "estadio": "La Arboleda",
       "condicion": "local"
-    },
-    {
-      "fecha": "2026-09-17",
-      "hora": null,
-      "torneo": "Clausura",
-      "ronda": null,
-      "local": "Rubio Ñu",
-      "visitante": "Nacional",
-      "estadio": "La Arboleda",
-      "condicion": "local",
-      "nota": {
-        "es": "Segundo cruce con Nacional en cuatro días: a confirmar con la APF.",
-        "en": "Second meeting with Nacional in four days: to be confirmed with the APF."
-      }
     },
     {
       "fecha": "2026-09-19",
@@ -41,34 +27,30 @@
       }
     },
     {
+      "fecha": "2026-09-23",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": 11,
+      "local": "Cerro Porteño",
+      "visitante": "Rubio Ñu",
+      "estadio": "",
+      "condicion": "visitante"
+    },
+    {
       "fecha": "2026-09-30",
       "hora": null,
       "torneo": "Clausura",
-      "ronda": null,
-      "local": "Rubio Ñu",
-      "visitante": "Cerro Porteño",
-      "estadio": "",
-      "condicion": null,
-      "nota": {
-        "es": "Condición de local o visitante a confirmar.",
-        "en": "Home or away to be confirmed."
-      }
-    },
-    {
-      "fecha": "2026-10-01",
-      "hora": null,
-      "torneo": "Clausura",
-      "ronda": null,
+      "ronda": 12,
       "local": "Rubio Ñu",
       "visitante": "Sportivo 2 de Mayo",
       "estadio": "La Arboleda",
       "condicion": "local"
     },
     {
-      "fecha": "2026-10-08",
+      "fecha": "2026-10-07",
       "hora": null,
       "torneo": "Clausura",
-      "ronda": null,
+      "ronda": 13,
       "local": "Sportivo Ameliano",
       "visitante": "Rubio Ñu",
       "estadio": "",
@@ -78,15 +60,31 @@
       "fecha": "2026-10-14",
       "hora": null,
       "torneo": "Clausura",
-      "ronda": null,
+      "ronda": 14,
       "local": "Rubio Ñu",
       "visitante": "Olimpia",
+      "estadio": "La Arboleda",
+      "condicion": "local"
+    },
+    {
+      "fecha": "2026-10-21",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": 15,
+      "local": "Deportivo Recoleta",
+      "visitante": "Rubio Ñu",
       "estadio": "",
-      "condicion": null,
-      "nota": {
-        "es": "Condición de local o visitante a confirmar.",
-        "en": "Home or away to be confirmed."
-      }
+      "condicion": "visitante"
+    },
+    {
+      "fecha": "2026-10-29",
+      "hora": null,
+      "torneo": "Clausura",
+      "ronda": 16,
+      "local": "Rubio Ñu",
+      "visitante": "Guaraní",
+      "estadio": "La Arboleda",
+      "condicion": "local"
     }
   ]
 }
