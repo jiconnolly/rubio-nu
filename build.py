@@ -546,6 +546,14 @@ ES["club"] = """
         </div>
       </article>
       <article class="hito">
+        <div class="hito-anio">2008</div>
+        <div>
+          <h3>Primer título de la Intermedia</h3>
+          <p>Con Francisco «Chiqui» Arce como entrenador, el club gana por primera vez la División
+          Intermedia y vuelve a la máxima categoría.</p>
+        </div>
+      </article>
+      <article class="hito">
         <div class="hito-anio">2009</div>
         <div>
           <h3>El regreso y el mejor puesto</h3>
@@ -557,7 +565,8 @@ ES["club"] = """
         <div class="hito-anio">2025</div>
         <div>
           <h3>Campeón de la División Intermedia</h3>
-          <p>El club gana la segunda categoría del fútbol paraguayo y asciende a la División de Honor.</p>
+          <p>Dirigido por Héctor Mareco, Rubio Ñu sella el título con un empate sin goles ante
+          Guaireña en el Parque del Guairá y asciende a la División de Honor.</p>
         </div>
       </article>
       <article class="hito">
@@ -634,7 +643,7 @@ ES["club"] = """
       <p class="entrada">La historia de Rubio Ñu no es una vitrina de títulos grandes: es la de un
       club que se cayó muchas veces y siempre volvió a subir.</p>
       <ul class="lista-marca">
-        <li>Campeón de la División Intermedia en 2008 y 2025.</li>
+        <li>Campeón de la División Intermedia en 2008, con Francisco «Chiqui» Arce, y en 2025, con Héctor Mareco.</li>
         <li>Campeón de la segunda categoría, bajo sus denominaciones anteriores, en 1926, 1941,
         1954, 1961, 1963 y 1972.</li>
         <li>Mejor campaña en la máxima categoría: cuarto puesto en el Clausura 2009.</li>
@@ -1265,6 +1274,14 @@ EN["club"] = """
         </div>
       </article>
       <article class="hito">
+        <div class="hito-anio">2008</div>
+        <div>
+          <h3>First División Intermedia title</h3>
+          <p>With Francisco "Chiqui" Arce as head coach, the club wins the División Intermedia for
+          the first time and returns to the top division.</p>
+        </div>
+      </article>
+      <article class="hito">
         <div class="hito-anio">2009</div>
         <div>
           <h3>The return, and the best finish</h3>
@@ -1276,7 +1293,8 @@ EN["club"] = """
         <div class="hito-anio">2025</div>
         <div>
           <h3>División Intermedia champions</h3>
-          <p>The club wins the Paraguayan second division and earns promotion to the top flight.</p>
+          <p>Coached by Héctor Mareco, Rubio Ñu seals the title with a goalless draw against
+          Guaireña at the Parque del Guairá and wins promotion to the top flight.</p>
         </div>
       </article>
       <article class="hito">
@@ -1353,7 +1371,7 @@ EN["club"] = """
       <p class="entrada">Rubio Ñu's history is not a cabinet full of major trophies: it is the
       story of a club that fell many times and always climbed back.</p>
       <ul class="lista-marca">
-        <li>División Intermedia champions in 2008 and 2025.</li>
+        <li>División Intermedia champions in 2008 under Francisco "Chiqui" Arce, and in 2025 under Héctor Mareco.</li>
         <li>Second-tier champions, under the division's earlier names, in 1926, 1941, 1954, 1961,
         1963 and 1972.</li>
         <li>Best top-flight campaign: fourth place in the 2009 Clausura.</li>
