@@ -138,7 +138,13 @@
       "gc": 24,
       "dg": -9,
       "pts": 13,
-      "forma": [],
+      "forma": [
+        "P",
+        "P",
+        "E",
+        "G",
+        "E"
+      ],
       "esNosotros": true
     },
     {

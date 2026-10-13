@@ -33,5 +33,52 @@
       "estadio": "La Arboleda",
       "condicion": "local"
     }
+  ],
+  "resultados": [
+    {
+      "fecha": "2026-10-11",
+      "torneo": "Clausura",
+      "ronda": 14,
+      "local": "Rubio Ñu",
+      "visitante": "Olimpia",
+      "golesLocal": 0,
+      "golesVisitante": 0
+    },
+    {
+      "fecha": "2026-10-06",
+      "torneo": "Clausura",
+      "ronda": 13,
+      "local": "Sportivo Ameliano",
+      "visitante": "Rubio Ñu",
+      "golesLocal": 1,
+      "golesVisitante": 2
+    },
+    {
+      "fecha": "2026-09-30",
+      "torneo": "Copa Paraguay",
+      "ronda": null,
+      "local": "Cerro Porteño",
+      "visitante": "Rubio Ñu",
+      "golesLocal": 2,
+      "golesVisitante": 1
+    },
+    {
+      "fecha": "2026-09-26",
+      "torneo": "Clausura",
+      "ronda": 12,
+      "local": "Rubio Ñu",
+      "visitante": "Sportivo 2 de Mayo",
+      "golesLocal": 2,
+      "golesVisitante": 2
+    },
+    {
+      "fecha": "2026-09-19",
+      "torneo": "Clausura",
+      "ronda": 11,
+      "local": "Cerro Porteño",
+      "visitante": "Rubio Ñu",
+      "golesLocal": 1,
+      "golesVisitante": 0
+    }
   ]
 }
